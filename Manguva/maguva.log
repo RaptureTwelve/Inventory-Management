@@ -1,0 +1,1899 @@
+INFO 2025-08-11 15:32:53,854 autoreload Watching for file changes with StatReloader
+INFO 2025-08-11 21:13:59,757 autoreload Watching for file changes with StatReloader
+INFO 2025-08-11 21:18:34,549 autoreload Watching for file changes with StatReloader
+WARNING 2025-08-11 21:18:37,939 log Not Found: /
+WARNING 2025-08-11 21:18:37,940 basehttp "GET / HTTP/1.1" 404 2305
+WARNING 2025-08-11 21:18:38,123 log Not Found: /favicon.ico
+WARNING 2025-08-11 21:18:38,124 basehttp "GET /favicon.ico HTTP/1.1" 404 2356
+WARNING 2025-08-11 21:53:49,962 log Unauthorized: /api/auth/verify
+WARNING 2025-08-11 21:53:49,963 basehttp "GET /api/auth/verify HTTP/1.1" 401 58
+WARNING 2025-08-11 21:53:50,029 log Not Found: /api/logout
+WARNING 2025-08-11 21:53:50,030 basehttp "POST /api/logout HTTP/1.1" 404 9259
+INFO 2025-08-11 21:56:20,181 basehttp "OPTIONS /api/login HTTP/1.1" 200 0
+ERROR 2025-08-11 21:56:20,606 log Internal Server Error: /api/login
+Traceback (most recent call last):
+  File "E:\Gigs\Magavi\Maguva-Project\.venv\lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+psycopg2.errors.UndefinedTable: relation "admin_app_maguvausers" does not exist
+LINE 1: ..._staff", "admin_app_maguvausers"."is_active" FROM "admin_app...
+                                                             ^
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "E:\Gigs\Magavi\Maguva-Project\.venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\Gigs\Magavi\Maguva-Project\.venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\Gigs\Magavi\Maguva-Project\.venv\lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "E:\Gigs\Magavi\Maguva-Project\.venv\lib\site-packages\django\views\generic\base.py", line 105, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "E:\Gigs\Magavi\Maguva-Project\.venv\lib\site-packages\rest_framework\views.py", line 515, in dispatch
+    response = self.handle_exception(exc)
+  File "E:\Gigs\Magavi\Maguva-Project\.venv\lib\site-packages\rest_framework\views.py", line 475, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "E:\Gigs\Magavi\Maguva-Project\.venv\lib\site-packages\rest_framework\views.py", line 486, in raise_uncaught_exception
+    raise exc
+  File "E:\Gigs\Magavi\Maguva-Project\.venv\lib\site-packages\rest_framework\views.py", line 512, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "E:\Gigs\Magavi\Maguva-Project\Manguva\admin_app\views.py", line 27, in post
+    user = authenticate(request, email=email, password=password)
+  File "E:\Gigs\Magavi\Maguva-Project\.venv\lib\site-packages\django\views\decorators\debug.py", line 75, in sensitive_variables_wrapper
+    return func(*func_args, **func_kwargs)
+  File "E:\Gigs\Magavi\Maguva-Project\.venv\lib\site-packages\django\contrib\auth\__init__.py", line 114, in authenticate
+    user = backend.authenticate(request, **credentials)
+  File "E:\Gigs\Magavi\Maguva-Project\.venv\lib\site-packages\django\contrib\auth\backends.py", line 65, in authenticate
+    user = UserModel._default_manager.get_by_natural_key(username)
+  File "E:\Gigs\Magavi\Maguva-Project\.venv\lib\site-packages\django\contrib\auth\base_user.py", line 37, in get_by_natural_key
+    return self.get(**{self.model.USERNAME_FIELD: username})
+  File "E:\Gigs\Magavi\Maguva-Project\.venv\lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "E:\Gigs\Magavi\Maguva-Project\.venv\lib\site-packages\django\db\models\query.py", line 629, in get
+    num = len(clone)
+  File "E:\Gigs\Magavi\Maguva-Project\.venv\lib\site-packages\django\db\models\query.py", line 366, in __len__
+    self._fetch_all()
+  File "E:\Gigs\Magavi\Maguva-Project\.venv\lib\site-packages\django\db\models\query.py", line 1949, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "E:\Gigs\Magavi\Maguva-Project\.venv\lib\site-packages\django\db\models\query.py", line 91, in __iter__
+    results = compiler.execute_sql(
+  File "E:\Gigs\Magavi\Maguva-Project\.venv\lib\site-packages\django\db\models\sql\compiler.py", line 1623, in execute_sql
+    cursor.execute(sql, params)
+  File "E:\Gigs\Magavi\Maguva-Project\.venv\lib\site-packages\django\db\backends\utils.py", line 122, in execute
+    return super().execute(sql, params)
+  File "E:\Gigs\Magavi\Maguva-Project\.venv\lib\site-packages\django\db\backends\utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+  File "E:\Gigs\Magavi\Maguva-Project\.venv\lib\site-packages\django\db\backends\utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "E:\Gigs\Magavi\Maguva-Project\.venv\lib\site-packages\django\db\backends\utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+  File "E:\Gigs\Magavi\Maguva-Project\.venv\lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "E:\Gigs\Magavi\Maguva-Project\.venv\lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+django.db.utils.ProgrammingError: relation "admin_app_maguvausers" does not exist
+LINE 1: ..._staff", "admin_app_maguvausers"."is_active" FROM "admin_app...
+                                                             ^
+
+ERROR 2025-08-11 21:56:20,612 basehttp "POST /api/login HTTP/1.1" 500 188486
+ERROR 2025-08-11 21:56:24,918 log Internal Server Error: /api/login
+Traceback (most recent call last):
+  File "E:\Gigs\Magavi\Maguva-Project\.venv\lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+psycopg2.errors.UndefinedTable: relation "admin_app_maguvausers" does not exist
+LINE 1: ..._staff", "admin_app_maguvausers"."is_active" FROM "admin_app...
+                                                             ^
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "E:\Gigs\Magavi\Maguva-Project\.venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\Gigs\Magavi\Maguva-Project\.venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\Gigs\Magavi\Maguva-Project\.venv\lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "E:\Gigs\Magavi\Maguva-Project\.venv\lib\site-packages\django\views\generic\base.py", line 105, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "E:\Gigs\Magavi\Maguva-Project\.venv\lib\site-packages\rest_framework\views.py", line 515, in dispatch
+    response = self.handle_exception(exc)
+  File "E:\Gigs\Magavi\Maguva-Project\.venv\lib\site-packages\rest_framework\views.py", line 475, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "E:\Gigs\Magavi\Maguva-Project\.venv\lib\site-packages\rest_framework\views.py", line 486, in raise_uncaught_exception
+    raise exc
+  File "E:\Gigs\Magavi\Maguva-Project\.venv\lib\site-packages\rest_framework\views.py", line 512, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "E:\Gigs\Magavi\Maguva-Project\Manguva\admin_app\views.py", line 27, in post
+    user = authenticate(request, email=email, password=password)
+  File "E:\Gigs\Magavi\Maguva-Project\.venv\lib\site-packages\django\views\decorators\debug.py", line 75, in sensitive_variables_wrapper
+    return func(*func_args, **func_kwargs)
+  File "E:\Gigs\Magavi\Maguva-Project\.venv\lib\site-packages\django\contrib\auth\__init__.py", line 114, in authenticate
+    user = backend.authenticate(request, **credentials)
+  File "E:\Gigs\Magavi\Maguva-Project\.venv\lib\site-packages\django\contrib\auth\backends.py", line 65, in authenticate
+    user = UserModel._default_manager.get_by_natural_key(username)
+  File "E:\Gigs\Magavi\Maguva-Project\.venv\lib\site-packages\django\contrib\auth\base_user.py", line 37, in get_by_natural_key
+    return self.get(**{self.model.USERNAME_FIELD: username})
+  File "E:\Gigs\Magavi\Maguva-Project\.venv\lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "E:\Gigs\Magavi\Maguva-Project\.venv\lib\site-packages\django\db\models\query.py", line 629, in get
+    num = len(clone)
+  File "E:\Gigs\Magavi\Maguva-Project\.venv\lib\site-packages\django\db\models\query.py", line 366, in __len__
+    self._fetch_all()
+  File "E:\Gigs\Magavi\Maguva-Project\.venv\lib\site-packages\django\db\models\query.py", line 1949, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "E:\Gigs\Magavi\Maguva-Project\.venv\lib\site-packages\django\db\models\query.py", line 91, in __iter__
+    results = compiler.execute_sql(
+  File "E:\Gigs\Magavi\Maguva-Project\.venv\lib\site-packages\django\db\models\sql\compiler.py", line 1623, in execute_sql
+    cursor.execute(sql, params)
+  File "E:\Gigs\Magavi\Maguva-Project\.venv\lib\site-packages\django\db\backends\utils.py", line 122, in execute
+    return super().execute(sql, params)
+  File "E:\Gigs\Magavi\Maguva-Project\.venv\lib\site-packages\django\db\backends\utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+  File "E:\Gigs\Magavi\Maguva-Project\.venv\lib\site-packages\django\db\backends\utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "E:\Gigs\Magavi\Maguva-Project\.venv\lib\site-packages\django\db\backends\utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+  File "E:\Gigs\Magavi\Maguva-Project\.venv\lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "E:\Gigs\Magavi\Maguva-Project\.venv\lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+django.db.utils.ProgrammingError: relation "admin_app_maguvausers" does not exist
+LINE 1: ..._staff", "admin_app_maguvausers"."is_active" FROM "admin_app...
+                                                             ^
+
+ERROR 2025-08-11 21:56:24,922 basehttp "POST /api/login HTTP/1.1" 500 188486
+ERROR 2025-08-11 22:21:55,461 log Internal Server Error: /api/login
+Traceback (most recent call last):
+  File "E:\Gigs\Magavi\Maguva-Project\.venv\lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+psycopg2.errors.UndefinedTable: relation "admin_app_maguvausers" does not exist
+LINE 1: ..._staff", "admin_app_maguvausers"."is_active" FROM "admin_app...
+                                                             ^
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "E:\Gigs\Magavi\Maguva-Project\.venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\Gigs\Magavi\Maguva-Project\.venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\Gigs\Magavi\Maguva-Project\.venv\lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "E:\Gigs\Magavi\Maguva-Project\.venv\lib\site-packages\django\views\generic\base.py", line 105, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "E:\Gigs\Magavi\Maguva-Project\.venv\lib\site-packages\rest_framework\views.py", line 515, in dispatch
+    response = self.handle_exception(exc)
+  File "E:\Gigs\Magavi\Maguva-Project\.venv\lib\site-packages\rest_framework\views.py", line 475, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "E:\Gigs\Magavi\Maguva-Project\.venv\lib\site-packages\rest_framework\views.py", line 486, in raise_uncaught_exception
+    raise exc
+  File "E:\Gigs\Magavi\Maguva-Project\.venv\lib\site-packages\rest_framework\views.py", line 512, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "E:\Gigs\Magavi\Maguva-Project\Manguva\admin_app\views.py", line 27, in post
+    user = authenticate(request, email=email, password=password)
+  File "E:\Gigs\Magavi\Maguva-Project\.venv\lib\site-packages\django\views\decorators\debug.py", line 75, in sensitive_variables_wrapper
+    return func(*func_args, **func_kwargs)
+  File "E:\Gigs\Magavi\Maguva-Project\.venv\lib\site-packages\django\contrib\auth\__init__.py", line 114, in authenticate
+    user = backend.authenticate(request, **credentials)
+  File "E:\Gigs\Magavi\Maguva-Project\.venv\lib\site-packages\django\contrib\auth\backends.py", line 65, in authenticate
+    user = UserModel._default_manager.get_by_natural_key(username)
+  File "E:\Gigs\Magavi\Maguva-Project\.venv\lib\site-packages\django\contrib\auth\base_user.py", line 37, in get_by_natural_key
+    return self.get(**{self.model.USERNAME_FIELD: username})
+  File "E:\Gigs\Magavi\Maguva-Project\.venv\lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "E:\Gigs\Magavi\Maguva-Project\.venv\lib\site-packages\django\db\models\query.py", line 629, in get
+    num = len(clone)
+  File "E:\Gigs\Magavi\Maguva-Project\.venv\lib\site-packages\django\db\models\query.py", line 366, in __len__
+    self._fetch_all()
+  File "E:\Gigs\Magavi\Maguva-Project\.venv\lib\site-packages\django\db\models\query.py", line 1949, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "E:\Gigs\Magavi\Maguva-Project\.venv\lib\site-packages\django\db\models\query.py", line 91, in __iter__
+    results = compiler.execute_sql(
+  File "E:\Gigs\Magavi\Maguva-Project\.venv\lib\site-packages\django\db\models\sql\compiler.py", line 1623, in execute_sql
+    cursor.execute(sql, params)
+  File "E:\Gigs\Magavi\Maguva-Project\.venv\lib\site-packages\django\db\backends\utils.py", line 122, in execute
+    return super().execute(sql, params)
+  File "E:\Gigs\Magavi\Maguva-Project\.venv\lib\site-packages\django\db\backends\utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+  File "E:\Gigs\Magavi\Maguva-Project\.venv\lib\site-packages\django\db\backends\utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "E:\Gigs\Magavi\Maguva-Project\.venv\lib\site-packages\django\db\backends\utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+  File "E:\Gigs\Magavi\Maguva-Project\.venv\lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "E:\Gigs\Magavi\Maguva-Project\.venv\lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+django.db.utils.ProgrammingError: relation "admin_app_maguvausers" does not exist
+LINE 1: ..._staff", "admin_app_maguvausers"."is_active" FROM "admin_app...
+                                                             ^
+
+ERROR 2025-08-11 22:21:55,464 basehttp "POST /api/login HTTP/1.1" 500 188486
+ERROR 2025-08-11 22:21:56,166 log Internal Server Error: /api/login
+Traceback (most recent call last):
+  File "E:\Gigs\Magavi\Maguva-Project\.venv\lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+psycopg2.errors.UndefinedTable: relation "admin_app_maguvausers" does not exist
+LINE 1: ..._staff", "admin_app_maguvausers"."is_active" FROM "admin_app...
+                                                             ^
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "E:\Gigs\Magavi\Maguva-Project\.venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\Gigs\Magavi\Maguva-Project\.venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\Gigs\Magavi\Maguva-Project\.venv\lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "E:\Gigs\Magavi\Maguva-Project\.venv\lib\site-packages\django\views\generic\base.py", line 105, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "E:\Gigs\Magavi\Maguva-Project\.venv\lib\site-packages\rest_framework\views.py", line 515, in dispatch
+    response = self.handle_exception(exc)
+  File "E:\Gigs\Magavi\Maguva-Project\.venv\lib\site-packages\rest_framework\views.py", line 475, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "E:\Gigs\Magavi\Maguva-Project\.venv\lib\site-packages\rest_framework\views.py", line 486, in raise_uncaught_exception
+    raise exc
+  File "E:\Gigs\Magavi\Maguva-Project\.venv\lib\site-packages\rest_framework\views.py", line 512, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "E:\Gigs\Magavi\Maguva-Project\Manguva\admin_app\views.py", line 27, in post
+    user = authenticate(request, email=email, password=password)
+  File "E:\Gigs\Magavi\Maguva-Project\.venv\lib\site-packages\django\views\decorators\debug.py", line 75, in sensitive_variables_wrapper
+    return func(*func_args, **func_kwargs)
+  File "E:\Gigs\Magavi\Maguva-Project\.venv\lib\site-packages\django\contrib\auth\__init__.py", line 114, in authenticate
+    user = backend.authenticate(request, **credentials)
+  File "E:\Gigs\Magavi\Maguva-Project\.venv\lib\site-packages\django\contrib\auth\backends.py", line 65, in authenticate
+    user = UserModel._default_manager.get_by_natural_key(username)
+  File "E:\Gigs\Magavi\Maguva-Project\.venv\lib\site-packages\django\contrib\auth\base_user.py", line 37, in get_by_natural_key
+    return self.get(**{self.model.USERNAME_FIELD: username})
+  File "E:\Gigs\Magavi\Maguva-Project\.venv\lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "E:\Gigs\Magavi\Maguva-Project\.venv\lib\site-packages\django\db\models\query.py", line 629, in get
+    num = len(clone)
+  File "E:\Gigs\Magavi\Maguva-Project\.venv\lib\site-packages\django\db\models\query.py", line 366, in __len__
+    self._fetch_all()
+  File "E:\Gigs\Magavi\Maguva-Project\.venv\lib\site-packages\django\db\models\query.py", line 1949, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "E:\Gigs\Magavi\Maguva-Project\.venv\lib\site-packages\django\db\models\query.py", line 91, in __iter__
+    results = compiler.execute_sql(
+  File "E:\Gigs\Magavi\Maguva-Project\.venv\lib\site-packages\django\db\models\sql\compiler.py", line 1623, in execute_sql
+    cursor.execute(sql, params)
+  File "E:\Gigs\Magavi\Maguva-Project\.venv\lib\site-packages\django\db\backends\utils.py", line 122, in execute
+    return super().execute(sql, params)
+  File "E:\Gigs\Magavi\Maguva-Project\.venv\lib\site-packages\django\db\backends\utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+  File "E:\Gigs\Magavi\Maguva-Project\.venv\lib\site-packages\django\db\backends\utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "E:\Gigs\Magavi\Maguva-Project\.venv\lib\site-packages\django\db\backends\utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+  File "E:\Gigs\Magavi\Maguva-Project\.venv\lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "E:\Gigs\Magavi\Maguva-Project\.venv\lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+django.db.utils.ProgrammingError: relation "admin_app_maguvausers" does not exist
+LINE 1: ..._staff", "admin_app_maguvausers"."is_active" FROM "admin_app...
+                                                             ^
+
+ERROR 2025-08-11 22:21:56,168 basehttp "POST /api/login HTTP/1.1" 500 188486
+ERROR 2025-08-11 22:21:56,337 log Internal Server Error: /api/login
+Traceback (most recent call last):
+  File "E:\Gigs\Magavi\Maguva-Project\.venv\lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+psycopg2.errors.UndefinedTable: relation "admin_app_maguvausers" does not exist
+LINE 1: ..._staff", "admin_app_maguvausers"."is_active" FROM "admin_app...
+                                                             ^
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "E:\Gigs\Magavi\Maguva-Project\.venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\Gigs\Magavi\Maguva-Project\.venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\Gigs\Magavi\Maguva-Project\.venv\lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "E:\Gigs\Magavi\Maguva-Project\.venv\lib\site-packages\django\views\generic\base.py", line 105, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "E:\Gigs\Magavi\Maguva-Project\.venv\lib\site-packages\rest_framework\views.py", line 515, in dispatch
+    response = self.handle_exception(exc)
+  File "E:\Gigs\Magavi\Maguva-Project\.venv\lib\site-packages\rest_framework\views.py", line 475, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "E:\Gigs\Magavi\Maguva-Project\.venv\lib\site-packages\rest_framework\views.py", line 486, in raise_uncaught_exception
+    raise exc
+  File "E:\Gigs\Magavi\Maguva-Project\.venv\lib\site-packages\rest_framework\views.py", line 512, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "E:\Gigs\Magavi\Maguva-Project\Manguva\admin_app\views.py", line 27, in post
+    user = authenticate(request, email=email, password=password)
+  File "E:\Gigs\Magavi\Maguva-Project\.venv\lib\site-packages\django\views\decorators\debug.py", line 75, in sensitive_variables_wrapper
+    return func(*func_args, **func_kwargs)
+  File "E:\Gigs\Magavi\Maguva-Project\.venv\lib\site-packages\django\contrib\auth\__init__.py", line 114, in authenticate
+    user = backend.authenticate(request, **credentials)
+  File "E:\Gigs\Magavi\Maguva-Project\.venv\lib\site-packages\django\contrib\auth\backends.py", line 65, in authenticate
+    user = UserModel._default_manager.get_by_natural_key(username)
+  File "E:\Gigs\Magavi\Maguva-Project\.venv\lib\site-packages\django\contrib\auth\base_user.py", line 37, in get_by_natural_key
+    return self.get(**{self.model.USERNAME_FIELD: username})
+  File "E:\Gigs\Magavi\Maguva-Project\.venv\lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "E:\Gigs\Magavi\Maguva-Project\.venv\lib\site-packages\django\db\models\query.py", line 629, in get
+    num = len(clone)
+  File "E:\Gigs\Magavi\Maguva-Project\.venv\lib\site-packages\django\db\models\query.py", line 366, in __len__
+    self._fetch_all()
+  File "E:\Gigs\Magavi\Maguva-Project\.venv\lib\site-packages\django\db\models\query.py", line 1949, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "E:\Gigs\Magavi\Maguva-Project\.venv\lib\site-packages\django\db\models\query.py", line 91, in __iter__
+    results = compiler.execute_sql(
+  File "E:\Gigs\Magavi\Maguva-Project\.venv\lib\site-packages\django\db\models\sql\compiler.py", line 1623, in execute_sql
+    cursor.execute(sql, params)
+  File "E:\Gigs\Magavi\Maguva-Project\.venv\lib\site-packages\django\db\backends\utils.py", line 122, in execute
+    return super().execute(sql, params)
+  File "E:\Gigs\Magavi\Maguva-Project\.venv\lib\site-packages\django\db\backends\utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+  File "E:\Gigs\Magavi\Maguva-Project\.venv\lib\site-packages\django\db\backends\utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "E:\Gigs\Magavi\Maguva-Project\.venv\lib\site-packages\django\db\backends\utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+  File "E:\Gigs\Magavi\Maguva-Project\.venv\lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "E:\Gigs\Magavi\Maguva-Project\.venv\lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+django.db.utils.ProgrammingError: relation "admin_app_maguvausers" does not exist
+LINE 1: ..._staff", "admin_app_maguvausers"."is_active" FROM "admin_app...
+                                                             ^
+
+ERROR 2025-08-11 22:21:56,339 basehttp "POST /api/login HTTP/1.1" 500 188486
+ERROR 2025-08-11 22:22:08,798 log Internal Server Error: /api/login
+Traceback (most recent call last):
+  File "E:\Gigs\Magavi\Maguva-Project\.venv\lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+psycopg2.errors.UndefinedTable: relation "admin_app_maguvausers" does not exist
+LINE 1: ..._staff", "admin_app_maguvausers"."is_active" FROM "admin_app...
+                                                             ^
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "E:\Gigs\Magavi\Maguva-Project\.venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\Gigs\Magavi\Maguva-Project\.venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\Gigs\Magavi\Maguva-Project\.venv\lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "E:\Gigs\Magavi\Maguva-Project\.venv\lib\site-packages\django\views\generic\base.py", line 105, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "E:\Gigs\Magavi\Maguva-Project\.venv\lib\site-packages\rest_framework\views.py", line 515, in dispatch
+    response = self.handle_exception(exc)
+  File "E:\Gigs\Magavi\Maguva-Project\.venv\lib\site-packages\rest_framework\views.py", line 475, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "E:\Gigs\Magavi\Maguva-Project\.venv\lib\site-packages\rest_framework\views.py", line 486, in raise_uncaught_exception
+    raise exc
+  File "E:\Gigs\Magavi\Maguva-Project\.venv\lib\site-packages\rest_framework\views.py", line 512, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "E:\Gigs\Magavi\Maguva-Project\Manguva\admin_app\views.py", line 27, in post
+    user = authenticate(request, email=email, password=password)
+  File "E:\Gigs\Magavi\Maguva-Project\.venv\lib\site-packages\django\views\decorators\debug.py", line 75, in sensitive_variables_wrapper
+    return func(*func_args, **func_kwargs)
+  File "E:\Gigs\Magavi\Maguva-Project\.venv\lib\site-packages\django\contrib\auth\__init__.py", line 114, in authenticate
+    user = backend.authenticate(request, **credentials)
+  File "E:\Gigs\Magavi\Maguva-Project\.venv\lib\site-packages\django\contrib\auth\backends.py", line 65, in authenticate
+    user = UserModel._default_manager.get_by_natural_key(username)
+  File "E:\Gigs\Magavi\Maguva-Project\.venv\lib\site-packages\django\contrib\auth\base_user.py", line 37, in get_by_natural_key
+    return self.get(**{self.model.USERNAME_FIELD: username})
+  File "E:\Gigs\Magavi\Maguva-Project\.venv\lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "E:\Gigs\Magavi\Maguva-Project\.venv\lib\site-packages\django\db\models\query.py", line 629, in get
+    num = len(clone)
+  File "E:\Gigs\Magavi\Maguva-Project\.venv\lib\site-packages\django\db\models\query.py", line 366, in __len__
+    self._fetch_all()
+  File "E:\Gigs\Magavi\Maguva-Project\.venv\lib\site-packages\django\db\models\query.py", line 1949, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "E:\Gigs\Magavi\Maguva-Project\.venv\lib\site-packages\django\db\models\query.py", line 91, in __iter__
+    results = compiler.execute_sql(
+  File "E:\Gigs\Magavi\Maguva-Project\.venv\lib\site-packages\django\db\models\sql\compiler.py", line 1623, in execute_sql
+    cursor.execute(sql, params)
+  File "E:\Gigs\Magavi\Maguva-Project\.venv\lib\site-packages\django\db\backends\utils.py", line 122, in execute
+    return super().execute(sql, params)
+  File "E:\Gigs\Magavi\Maguva-Project\.venv\lib\site-packages\django\db\backends\utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+  File "E:\Gigs\Magavi\Maguva-Project\.venv\lib\site-packages\django\db\backends\utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "E:\Gigs\Magavi\Maguva-Project\.venv\lib\site-packages\django\db\backends\utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+  File "E:\Gigs\Magavi\Maguva-Project\.venv\lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "E:\Gigs\Magavi\Maguva-Project\.venv\lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+django.db.utils.ProgrammingError: relation "admin_app_maguvausers" does not exist
+LINE 1: ..._staff", "admin_app_maguvausers"."is_active" FROM "admin_app...
+                                                             ^
+
+ERROR 2025-08-11 22:22:08,802 basehttp "POST /api/login HTTP/1.1" 500 188486
+ERROR 2025-08-11 22:22:18,603 log Internal Server Error: /api/login
+Traceback (most recent call last):
+  File "E:\Gigs\Magavi\Maguva-Project\.venv\lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+psycopg2.errors.UndefinedTable: relation "admin_app_maguvausers" does not exist
+LINE 1: ..._staff", "admin_app_maguvausers"."is_active" FROM "admin_app...
+                                                             ^
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "E:\Gigs\Magavi\Maguva-Project\.venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\Gigs\Magavi\Maguva-Project\.venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\Gigs\Magavi\Maguva-Project\.venv\lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "E:\Gigs\Magavi\Maguva-Project\.venv\lib\site-packages\django\views\generic\base.py", line 105, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "E:\Gigs\Magavi\Maguva-Project\.venv\lib\site-packages\rest_framework\views.py", line 515, in dispatch
+    response = self.handle_exception(exc)
+  File "E:\Gigs\Magavi\Maguva-Project\.venv\lib\site-packages\rest_framework\views.py", line 475, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "E:\Gigs\Magavi\Maguva-Project\.venv\lib\site-packages\rest_framework\views.py", line 486, in raise_uncaught_exception
+    raise exc
+  File "E:\Gigs\Magavi\Maguva-Project\.venv\lib\site-packages\rest_framework\views.py", line 512, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "E:\Gigs\Magavi\Maguva-Project\Manguva\admin_app\views.py", line 27, in post
+    user = authenticate(request, email=email, password=password)
+  File "E:\Gigs\Magavi\Maguva-Project\.venv\lib\site-packages\django\views\decorators\debug.py", line 75, in sensitive_variables_wrapper
+    return func(*func_args, **func_kwargs)
+  File "E:\Gigs\Magavi\Maguva-Project\.venv\lib\site-packages\django\contrib\auth\__init__.py", line 114, in authenticate
+    user = backend.authenticate(request, **credentials)
+  File "E:\Gigs\Magavi\Maguva-Project\.venv\lib\site-packages\django\contrib\auth\backends.py", line 65, in authenticate
+    user = UserModel._default_manager.get_by_natural_key(username)
+  File "E:\Gigs\Magavi\Maguva-Project\.venv\lib\site-packages\django\contrib\auth\base_user.py", line 37, in get_by_natural_key
+    return self.get(**{self.model.USERNAME_FIELD: username})
+  File "E:\Gigs\Magavi\Maguva-Project\.venv\lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "E:\Gigs\Magavi\Maguva-Project\.venv\lib\site-packages\django\db\models\query.py", line 629, in get
+    num = len(clone)
+  File "E:\Gigs\Magavi\Maguva-Project\.venv\lib\site-packages\django\db\models\query.py", line 366, in __len__
+    self._fetch_all()
+  File "E:\Gigs\Magavi\Maguva-Project\.venv\lib\site-packages\django\db\models\query.py", line 1949, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "E:\Gigs\Magavi\Maguva-Project\.venv\lib\site-packages\django\db\models\query.py", line 91, in __iter__
+    results = compiler.execute_sql(
+  File "E:\Gigs\Magavi\Maguva-Project\.venv\lib\site-packages\django\db\models\sql\compiler.py", line 1623, in execute_sql
+    cursor.execute(sql, params)
+  File "E:\Gigs\Magavi\Maguva-Project\.venv\lib\site-packages\django\db\backends\utils.py", line 122, in execute
+    return super().execute(sql, params)
+  File "E:\Gigs\Magavi\Maguva-Project\.venv\lib\site-packages\django\db\backends\utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+  File "E:\Gigs\Magavi\Maguva-Project\.venv\lib\site-packages\django\db\backends\utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "E:\Gigs\Magavi\Maguva-Project\.venv\lib\site-packages\django\db\backends\utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+  File "E:\Gigs\Magavi\Maguva-Project\.venv\lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "E:\Gigs\Magavi\Maguva-Project\.venv\lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+django.db.utils.ProgrammingError: relation "admin_app_maguvausers" does not exist
+LINE 1: ..._staff", "admin_app_maguvausers"."is_active" FROM "admin_app...
+                                                             ^
+
+ERROR 2025-08-11 22:22:18,606 basehttp "POST /api/login HTTP/1.1" 500 188486
+INFO 2025-08-11 22:47:24,239 basehttp "POST /api/login HTTP/1.1" 200 309
+INFO 2025-08-11 22:47:24,365 basehttp "OPTIONS /api/api/dashboard/overview/ HTTP/1.1" 200 0
+INFO 2025-08-11 22:47:24,373 basehttp "OPTIONS /api/api/dashboard/sales-chart/?days=7 HTTP/1.1" 200 0
+INFO 2025-08-11 22:47:24,374 basehttp "OPTIONS /api/api/dashboard/recent-orders/?limit=5 HTTP/1.1" 200 0
+INFO 2025-08-11 22:47:24,381 basehttp "OPTIONS /api/api/dashboard/product-performance/?limit=5 HTTP/1.1" 200 0
+INFO 2025-08-11 22:47:24,387 basehttp "OPTIONS /api/api/dashboard/monthly-trend/ HTTP/1.1" 200 0
+INFO 2025-08-11 22:47:24,389 basehttp "OPTIONS /api/api/dashboard/low-stock/?threshold=10 HTTP/1.1" 200 0
+INFO 2025-08-11 22:47:24,401 basehttp "OPTIONS /api/api/dashboard/payment-stats/?days=30 HTTP/1.1" 200 0
+INFO 2025-08-11 22:47:24,503 basehttp "GET /api/api/dashboard/recent-orders/?limit=5 HTTP/1.1" 200 2
+INFO 2025-08-11 22:47:24,511 basehttp "GET /api/api/dashboard/product-performance/?limit=5 HTTP/1.1" 200 2
+INFO 2025-08-11 22:47:24,524 basehttp "GET /api/api/dashboard/sales-chart/?days=7 HTTP/1.1" 200 2
+INFO 2025-08-11 22:47:24,533 basehttp "GET /api/api/dashboard/low-stock/?threshold=10 HTTP/1.1" 200 2
+INFO 2025-08-11 22:47:24,536 basehttp "GET /api/api/dashboard/monthly-trend/ HTTP/1.1" 200 2
+INFO 2025-08-11 22:47:24,538 basehttp "GET /api/api/dashboard/overview/ HTTP/1.1" 200 295
+INFO 2025-08-11 22:47:24,606 basehttp "GET /api/api/dashboard/payment-stats/?days=30 HTTP/1.1" 200 2
+INFO 2025-08-11 22:47:32,027 basehttp "OPTIONS /api/vendors HTTP/1.1" 200 0
+INFO 2025-08-11 22:47:32,037 basehttp "GET /api/vendors HTTP/1.1" 301 0
+INFO 2025-08-11 22:47:32,040 basehttp "OPTIONS /api/vendors/ HTTP/1.1" 200 0
+INFO 2025-08-11 22:47:32,113 basehttp "GET /api/vendors/ HTTP/1.1" 200 2
+INFO 2025-08-11 22:47:37,600 basehttp "OPTIONS /api/products HTTP/1.1" 200 0
+INFO 2025-08-11 22:47:37,600 basehttp "OPTIONS /api/products/add/features HTTP/1.1" 200 0
+INFO 2025-08-11 22:47:37,680 basehttp "GET /api/products HTTP/1.1" 200 2
+INFO 2025-08-11 22:47:37,784 basehttp "GET /api/products/add/features HTTP/1.1" 200 845
+INFO 2025-08-11 22:47:38,375 basehttp "OPTIONS /api/inventory HTTP/1.1" 200 0
+INFO 2025-08-11 22:47:38,445 basehttp "GET /api/inventory HTTP/1.1" 200 2
+INFO 2025-08-11 22:47:44,189 basehttp "GET /api/inventory HTTP/1.1" 200 2
+INFO 2025-08-11 22:47:44,621 basehttp "GET /api/products HTTP/1.1" 200 2
+INFO 2025-08-11 22:47:44,622 basehttp "GET /api/products/add/features HTTP/1.1" 200 845
+INFO 2025-08-11 22:47:45,313 basehttp "GET /api/vendors/ HTTP/1.1" 200 2
+INFO 2025-08-11 22:47:45,743 basehttp "GET /api/api/dashboard/recent-orders/?limit=5 HTTP/1.1" 200 2
+INFO 2025-08-11 22:47:45,763 basehttp "GET /api/api/dashboard/sales-chart/?days=7 HTTP/1.1" 200 2
+INFO 2025-08-11 22:47:45,764 basehttp "GET /api/api/dashboard/product-performance/?limit=5 HTTP/1.1" 200 2
+INFO 2025-08-11 22:47:45,767 basehttp "GET /api/api/dashboard/payment-stats/?days=30 HTTP/1.1" 200 2
+INFO 2025-08-11 22:47:45,768 basehttp "GET /api/api/dashboard/overview/ HTTP/1.1" 200 295
+INFO 2025-08-11 22:47:45,768 basehttp "GET /api/api/dashboard/low-stock/?threshold=10 HTTP/1.1" 200 2
+INFO 2025-08-11 22:47:45,912 basehttp "GET /api/api/dashboard/monthly-trend/ HTTP/1.1" 200 2
+INFO 2025-08-11 22:47:55,681 basehttp "GET /api/vendors/ HTTP/1.1" 200 2
+INFO 2025-08-11 22:47:56,592 basehttp "GET /api/products HTTP/1.1" 200 2
+INFO 2025-08-11 22:47:56,596 basehttp "GET /api/products/add/features HTTP/1.1" 200 845
+INFO 2025-08-11 22:47:57,270 basehttp "GET /api/inventory HTTP/1.1" 200 2
+INFO 2025-08-11 22:47:58,447 basehttp "GET /api/vendors/ HTTP/1.1" 200 2
+INFO 2025-08-11 22:47:59,377 basehttp "GET /api/api/dashboard/recent-orders/?limit=5 HTTP/1.1" 200 2
+INFO 2025-08-11 22:47:59,383 basehttp "GET /api/api/dashboard/sales-chart/?days=7 HTTP/1.1" 200 2
+INFO 2025-08-11 22:47:59,387 basehttp "GET /api/api/dashboard/product-performance/?limit=5 HTTP/1.1" 200 2
+INFO 2025-08-11 22:47:59,397 basehttp "GET /api/api/dashboard/low-stock/?threshold=10 HTTP/1.1" 200 2
+INFO 2025-08-11 22:47:59,398 basehttp "GET /api/api/dashboard/payment-stats/?days=30 HTTP/1.1" 200 2
+INFO 2025-08-11 22:47:59,450 basehttp "GET /api/api/dashboard/monthly-trend/ HTTP/1.1" 200 2
+INFO 2025-08-11 22:47:59,481 basehttp "GET /api/api/dashboard/overview/ HTTP/1.1" 200 295
+INFO 2025-08-11 22:48:02,015 basehttp "GET /api/inventory HTTP/1.1" 200 2
+INFO 2025-08-11 22:48:02,433 basehttp "GET /api/products/add/features HTTP/1.1" 200 845
+INFO 2025-08-11 22:48:02,536 basehttp "GET /api/products HTTP/1.1" 200 2
+INFO 2025-08-11 22:48:03,021 basehttp "GET /api/vendors/ HTTP/1.1" 200 2
+INFO 2025-08-11 22:48:43,415 basehttp "OPTIONS /api/auth/verify HTTP/1.1" 200 0
+INFO 2025-08-11 22:48:43,415 basehttp "OPTIONS /api/auth/verify HTTP/1.1" 200 0
+INFO 2025-08-11 22:48:43,496 basehttp "GET /api/auth/verify HTTP/1.1" 200 66
+INFO 2025-08-11 22:48:43,577 basehttp "GET /api/auth/verify HTTP/1.1" 200 66
+INFO 2025-08-11 22:48:49,156 basehttp "GET /api/auth/verify HTTP/1.1" 200 66
+INFO 2025-08-11 22:48:49,337 basehttp "GET /api/api/dashboard/recent-orders/?limit=5 HTTP/1.1" 200 2
+INFO 2025-08-11 22:48:49,354 basehttp "GET /api/api/dashboard/product-performance/?limit=5 HTTP/1.1" 200 2
+INFO 2025-08-11 22:48:49,354 basehttp "GET /api/api/dashboard/sales-chart/?days=7 HTTP/1.1" 200 2
+INFO 2025-08-11 22:48:49,362 basehttp "GET /api/api/dashboard/low-stock/?threshold=10 HTTP/1.1" 200 2
+INFO 2025-08-11 22:48:49,364 basehttp "GET /api/api/dashboard/overview/ HTTP/1.1" 200 295
+INFO 2025-08-11 22:48:49,417 basehttp "GET /api/api/dashboard/monthly-trend/ HTTP/1.1" 200 2
+INFO 2025-08-11 22:48:49,447 basehttp "GET /api/api/dashboard/payment-stats/?days=30 HTTP/1.1" 200 2
+INFO 2025-08-11 22:49:15,776 basehttp "GET /api/auth/verify HTTP/1.1" 200 66
+INFO 2025-08-11 22:49:16,004 basehttp "GET /api/api/dashboard/payment-stats/?days=30 HTTP/1.1" 200 2
+INFO 2025-08-11 22:49:16,004 basehttp "GET /api/api/dashboard/sales-chart/?days=7 HTTP/1.1" 200 2
+INFO 2025-08-11 22:49:16,007 basehttp "GET /api/api/dashboard/product-performance/?limit=5 HTTP/1.1" 200 2
+INFO 2025-08-11 22:49:16,007 basehttp "GET /api/api/dashboard/low-stock/?threshold=10 HTTP/1.1" 200 2
+INFO 2025-08-11 22:49:16,011 basehttp "GET /api/api/dashboard/overview/ HTTP/1.1" 200 295
+INFO 2025-08-11 22:49:16,028 basehttp "GET /api/api/dashboard/recent-orders/?limit=5 HTTP/1.1" 200 2
+INFO 2025-08-11 22:49:16,068 basehttp "GET /api/api/dashboard/monthly-trend/ HTTP/1.1" 200 2
+WARNING 2025-08-11 22:49:25,324 log Unauthorized: /api/auth/verify
+WARNING 2025-08-11 22:49:25,325 basehttp "GET /api/auth/verify HTTP/1.1" 401 58
+WARNING 2025-08-11 22:49:25,342 log Not Found: /api/logout
+WARNING 2025-08-11 22:49:25,344 basehttp "POST /api/logout HTTP/1.1" 404 9259
+INFO 2025-08-11 22:50:13,310 basehttp "OPTIONS /api/login HTTP/1.1" 200 0
+INFO 2025-08-11 22:50:14,103 basehttp "POST /api/login HTTP/1.1" 200 309
+INFO 2025-08-11 22:50:14,200 basehttp "OPTIONS /api/products HTTP/1.1" 200 0
+INFO 2025-08-11 22:50:14,203 basehttp "OPTIONS /api/products/add/features HTTP/1.1" 200 0
+INFO 2025-08-11 22:50:14,282 basehttp "GET /api/products HTTP/1.1" 200 2
+INFO 2025-08-11 22:50:14,288 basehttp "GET /api/products/add/features HTTP/1.1" 200 845
+INFO 2025-08-11 22:50:17,439 basehttp "GET /api/products HTTP/1.1" 200 2
+INFO 2025-08-11 22:50:17,446 basehttp "GET /api/products/add/features HTTP/1.1" 200 845
+INFO 2025-08-11 22:50:30,177 basehttp "GET /api/products/add/features HTTP/1.1" 200 845
+INFO 2025-08-11 22:50:30,274 basehttp "GET /api/products HTTP/1.1" 200 2
+INFO 2025-08-11 22:50:38,421 basehttp "GET /api/inventory HTTP/1.1" 200 2
+INFO 2025-08-11 22:50:39,154 basehttp "GET /api/vendors/ HTTP/1.1" 200 2
+INFO 2025-08-11 22:50:55,384 basehttp "OPTIONS /api/vendors/add HTTP/1.1" 200 0
+INFO 2025-08-11 22:50:55,462 views Vendor creation request by user admin@admin.com
+INFO 2025-08-11 22:50:55,515 basehttp "POST /api/vendors/add HTTP/1.1" 201 212
+INFO 2025-08-11 22:50:55,610 basehttp "GET /api/vendors/ HTTP/1.1" 200 214
+INFO 2025-08-11 22:50:57,214 basehttp "GET /api/products HTTP/1.1" 200 2
+INFO 2025-08-11 22:50:57,221 basehttp "GET /api/products/add/features HTTP/1.1" 200 1057
+INFO 2025-08-11 22:51:40,975 basehttp "OPTIONS /api/products/add HTTP/1.1" 200 0
+INFO 2025-08-11 22:51:41,039 views Product creation request: {'vendor': 1, 'product_type': 'Lehenga', 'fabric_type': 'Georgette', 'color_code': '#ae2222', 'base_price': 1541, 'markup_price': 4534, 'discount_percentage': 0, 'mrp': 6075}
+INFO 2025-08-11 22:51:41,054 basehttp "POST /api/products/add HTTP/1.1" 201 259
+INFO 2025-08-11 22:51:41,215 basehttp "GET /api/products HTTP/1.1" 200 261
+INFO 2025-08-11 22:51:42,754 basehttp "GET /api/inventory HTTP/1.1" 200 2
+INFO 2025-08-11 22:51:46,693 basehttp "GET /api/products HTTP/1.1" 200 261
+INFO 2025-08-11 22:51:46,701 basehttp "GET /api/products/add/features HTTP/1.1" 200 1057
+INFO 2025-08-11 22:51:47,486 basehttp "GET /api/vendors/ HTTP/1.1" 200 214
+INFO 2025-08-11 22:51:48,608 basehttp "GET /api/api/dashboard/recent-orders/?limit=5 HTTP/1.1" 200 2
+INFO 2025-08-11 22:51:48,615 basehttp "GET /api/api/dashboard/sales-chart/?days=7 HTTP/1.1" 200 2
+INFO 2025-08-11 22:51:48,618 basehttp "GET /api/api/dashboard/product-performance/?limit=5 HTTP/1.1" 200 2
+INFO 2025-08-11 22:51:48,628 basehttp "GET /api/api/dashboard/payment-stats/?days=30 HTTP/1.1" 200 2
+INFO 2025-08-11 22:51:48,628 basehttp "GET /api/api/dashboard/low-stock/?threshold=10 HTTP/1.1" 200 145
+INFO 2025-08-11 22:51:48,683 basehttp "GET /api/api/dashboard/monthly-trend/ HTTP/1.1" 200 2
+INFO 2025-08-11 22:51:48,704 basehttp "GET /api/api/dashboard/overview/ HTTP/1.1" 200 295
+INFO 2025-08-11 22:51:56,388 basehttp "GET /api/products/add/features HTTP/1.1" 200 1057
+INFO 2025-08-11 22:51:56,390 basehttp "GET /api/products HTTP/1.1" 200 261
+INFO 2025-08-11 22:51:58,319 basehttp "OPTIONS /api/products/1/inventory HTTP/1.1" 200 0
+INFO 2025-08-11 22:51:58,384 basehttp "GET /api/products/1/inventory HTTP/1.1" 200 263
+INFO 2025-08-11 22:52:03,988 basehttp "GET /api/products HTTP/1.1" 200 261
+INFO 2025-08-11 22:52:03,988 basehttp "GET /api/products/add/features HTTP/1.1" 200 1057
+INFO 2025-08-11 22:52:19,324 basehttp "GET /api/inventory HTTP/1.1" 200 2
+INFO 2025-08-11 22:52:20,529 basehttp "GET /api/products HTTP/1.1" 200 261
+INFO 2025-08-11 22:52:20,529 basehttp "GET /api/products/add/features HTTP/1.1" 200 1057
+INFO 2025-08-11 22:52:22,367 basehttp "GET /api/inventory HTTP/1.1" 200 2
+INFO 2025-08-11 22:52:24,636 basehttp "OPTIONS /api/inventory/products HTTP/1.1" 200 0
+INFO 2025-08-11 22:52:24,702 basehttp "GET /api/inventory/products HTTP/1.1" 200 55
+INFO 2025-08-11 22:52:43,194 basehttp "OPTIONS /api/products/add/inventory HTTP/1.1" 200 0
+ERROR 2025-08-11 22:52:43,467 log Internal Server Error: /api/products/add/inventory
+Traceback (most recent call last):
+  File "E:\Gigs\Magavi\Maguva-Project\.venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\Gigs\Magavi\Maguva-Project\.venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\Gigs\Magavi\Maguva-Project\.venv\lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "E:\Gigs\Magavi\Maguva-Project\.venv\lib\site-packages\django\views\generic\base.py", line 105, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "E:\Gigs\Magavi\Maguva-Project\.venv\lib\site-packages\rest_framework\views.py", line 515, in dispatch
+    response = self.handle_exception(exc)
+  File "E:\Gigs\Magavi\Maguva-Project\.venv\lib\site-packages\rest_framework\views.py", line 475, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "E:\Gigs\Magavi\Maguva-Project\.venv\lib\site-packages\rest_framework\views.py", line 486, in raise_uncaught_exception
+    raise exc
+  File "E:\Gigs\Magavi\Maguva-Project\.venv\lib\site-packages\rest_framework\views.py", line 512, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "E:\Gigs\Magavi\Maguva-Project\Manguva\admin_app\views.py", line 265, in post
+    stock_count=F('stock_count') + 1
+NameError: name 'F' is not defined
+ERROR 2025-08-11 22:52:43,468 basehttp "POST /api/products/add/inventory HTTP/1.1" 500 117425
+INFO 2025-08-11 22:52:49,056 basehttp "GET /api/auth/verify HTTP/1.1" 200 66
+INFO 2025-08-11 22:52:49,270 basehttp "GET /api/api/dashboard/recent-orders/?limit=5 HTTP/1.1" 200 2
+INFO 2025-08-11 22:52:49,274 basehttp "GET /api/api/dashboard/sales-chart/?days=7 HTTP/1.1" 200 2
+INFO 2025-08-11 22:52:49,279 basehttp "GET /api/api/dashboard/product-performance/?limit=5 HTTP/1.1" 200 2
+INFO 2025-08-11 22:52:49,293 basehttp "GET /api/api/dashboard/low-stock/?threshold=10 HTTP/1.1" 200 145
+INFO 2025-08-11 22:52:49,297 basehttp "GET /api/api/dashboard/payment-stats/?days=30 HTTP/1.1" 200 2
+INFO 2025-08-11 22:52:49,301 basehttp "GET /api/api/dashboard/overview/ HTTP/1.1" 200 295
+INFO 2025-08-11 22:52:49,357 basehttp "GET /api/api/dashboard/monthly-trend/ HTTP/1.1" 200 2
+INFO 2025-08-11 22:52:50,118 basehttp "GET /api/products/add/features HTTP/1.1" 200 1057
+INFO 2025-08-11 22:52:50,208 basehttp "GET /api/products HTTP/1.1" 200 261
+INFO 2025-08-11 22:52:50,645 basehttp "GET /api/inventory HTTP/1.1" 200 455
+INFO 2025-08-11 22:52:53,893 basehttp "GET /api/inventory HTTP/1.1" 200 455
+INFO 2025-08-11 22:52:54,287 basehttp "GET /api/products/add/features HTTP/1.1" 200 1057
+INFO 2025-08-11 22:52:54,378 basehttp "GET /api/products HTTP/1.1" 200 261
+INFO 2025-08-11 22:53:03,003 basehttp "OPTIONS /api/auth/verify HTTP/1.1" 200 0
+INFO 2025-08-11 22:53:03,077 basehttp "GET /api/auth/verify HTTP/1.1" 200 66
+INFO 2025-08-11 22:53:03,231 basehttp "GET /api/products/add/features HTTP/1.1" 200 1057
+INFO 2025-08-11 22:53:03,332 basehttp "GET /api/products/add/features HTTP/1.1" 200 1057
+INFO 2025-08-11 22:53:03,337 basehttp "GET /api/products HTTP/1.1" 200 261
+INFO 2025-08-11 22:53:03,421 basehttp "GET /api/products HTTP/1.1" 200 261
+INFO 2025-08-11 22:53:05,638 basehttp "GET /api/products/1/inventory HTTP/1.1" 200 3875
+INFO 2025-08-11 22:53:23,010 basehttp "GET /api/products/add/features HTTP/1.1" 200 1057
+INFO 2025-08-11 22:53:23,111 basehttp "GET /api/products HTTP/1.1" 200 261
+INFO 2025-08-11 22:53:24,639 basehttp "GET /api/products HTTP/1.1" 200 261
+INFO 2025-08-11 22:53:24,640 basehttp "GET /api/products/add/features HTTP/1.1" 200 1057
+INFO 2025-08-11 22:53:28,838 basehttp "GET /api/products HTTP/1.1" 200 261
+INFO 2025-08-11 22:53:28,838 basehttp "GET /api/products/add/features HTTP/1.1" 200 1057
+INFO 2025-08-11 22:53:29,894 basehttp "GET /api/products/1/inventory HTTP/1.1" 200 3875
+INFO 2025-08-11 22:54:25,954 basehttp "GET /api/inventory HTTP/1.1" 200 455
+INFO 2025-08-11 22:54:38,826 basehttp "GET /api/products HTTP/1.1" 200 261
+INFO 2025-08-11 22:54:38,928 basehttp "GET /api/products/add/features HTTP/1.1" 200 1057
+INFO 2025-08-11 22:54:40,243 basehttp "GET /api/products/1/inventory HTTP/1.1" 200 3875
+INFO 2025-08-11 22:54:44,877 basehttp "OPTIONS /api/inventory/search/?sku=LEH-9362-S-ae2222-0694 HTTP/1.1" 200 0
+INFO 2025-08-11 22:54:44,935 basehttp "GET /api/inventory/search/?sku=LEH-9362-S-ae2222-0694 HTTP/1.1" 200 360
+INFO 2025-08-11 22:55:04,465 basehttp "GET /api/products HTTP/1.1" 200 261
+INFO 2025-08-11 22:55:04,465 basehttp "GET /api/products/add/features HTTP/1.1" 200 1057
+INFO 2025-08-11 22:55:10,550 basehttp "GET /api/products/add/features HTTP/1.1" 200 1057
+INFO 2025-08-11 22:55:10,551 basehttp "GET /api/products HTTP/1.1" 200 261
+INFO 2025-08-11 22:55:11,482 basehttp "GET /api/products HTTP/1.1" 200 261
+INFO 2025-08-11 22:55:11,482 basehttp "GET /api/products/add/features HTTP/1.1" 200 1057
+INFO 2025-08-11 22:55:14,900 basehttp "GET /api/inventory/search/?sku=LEH-9362-S-ae2222-0694 HTTP/1.1" 200 360
+INFO 2025-08-11 22:56:13,523 basehttp "OPTIONS /api/transactions/create HTTP/1.1" 200 0
+WARNING 2025-08-11 22:56:13,592 log Bad Request: /api/transactions/create
+WARNING 2025-08-11 22:56:13,593 basehttp "POST /api/transactions/create HTTP/1.1" 400 243
+WARNING 2025-08-11 22:56:21,929 log Bad Request: /api/transactions/create
+WARNING 2025-08-11 22:56:21,931 basehttp "POST /api/transactions/create HTTP/1.1" 400 243
+WARNING 2025-08-11 22:56:22,931 log Bad Request: /api/transactions/create
+WARNING 2025-08-11 22:56:22,932 basehttp "POST /api/transactions/create HTTP/1.1" 400 243
+WARNING 2025-08-11 22:56:26,770 log Bad Request: /api/transactions/create
+WARNING 2025-08-11 22:56:26,771 basehttp "POST /api/transactions/create HTTP/1.1" 400 243
+WARNING 2025-08-11 22:56:27,061 log Bad Request: /api/transactions/create
+WARNING 2025-08-11 22:56:27,061 basehttp "POST /api/transactions/create HTTP/1.1" 400 243
+WARNING 2025-08-11 22:56:27,332 log Bad Request: /api/transactions/create
+WARNING 2025-08-11 22:56:27,332 basehttp "POST /api/transactions/create HTTP/1.1" 400 243
+WARNING 2025-08-11 22:56:27,658 log Bad Request: /api/transactions/create
+WARNING 2025-08-11 22:56:27,658 basehttp "POST /api/transactions/create HTTP/1.1" 400 243
+INFO 2025-08-11 22:56:34,972 basehttp "GET /api/inventory HTTP/1.1" 200 455
+INFO 2025-08-11 22:56:36,777 basehttp "GET /api/products HTTP/1.1" 200 261
+INFO 2025-08-11 22:56:36,875 basehttp "GET /api/products/add/features HTTP/1.1" 200 1057
+INFO 2025-08-11 22:56:37,254 basehttp "GET /api/vendors/ HTTP/1.1" 200 214
+INFO 2025-08-11 22:56:38,143 basehttp "GET /api/api/dashboard/recent-orders/?limit=5 HTTP/1.1" 200 2
+INFO 2025-08-11 22:56:38,157 basehttp "GET /api/api/dashboard/product-performance/?limit=5 HTTP/1.1" 200 2
+INFO 2025-08-11 22:56:38,167 basehttp "GET /api/api/dashboard/low-stock/?threshold=10 HTTP/1.1" 200 145
+INFO 2025-08-11 22:56:38,171 basehttp "GET /api/api/dashboard/payment-stats/?days=30 HTTP/1.1" 200 2
+INFO 2025-08-11 22:56:38,173 basehttp "GET /api/api/dashboard/overview/ HTTP/1.1" 200 295
+INFO 2025-08-11 22:56:38,213 basehttp "GET /api/api/dashboard/monthly-trend/ HTTP/1.1" 200 2
+INFO 2025-08-11 22:56:38,238 basehttp "GET /api/api/dashboard/sales-chart/?days=7 HTTP/1.1" 200 2
+INFO 2025-08-11 22:56:48,494 basehttp "GET /api/auth/verify HTTP/1.1" 200 66
+INFO 2025-08-11 22:56:48,691 basehttp "GET /api/api/dashboard/sales-chart/?days=7 HTTP/1.1" 200 2
+INFO 2025-08-11 22:56:48,703 basehttp "GET /api/api/dashboard/low-stock/?threshold=10 HTTP/1.1" 200 145
+INFO 2025-08-11 22:56:48,704 basehttp "GET /api/api/dashboard/product-performance/?limit=5 HTTP/1.1" 200 2
+INFO 2025-08-11 22:56:48,710 basehttp "GET /api/api/dashboard/payment-stats/?days=30 HTTP/1.1" 200 2
+INFO 2025-08-11 22:56:48,711 basehttp "GET /api/api/dashboard/overview/ HTTP/1.1" 200 295
+INFO 2025-08-11 22:56:48,793 basehttp "GET /api/api/dashboard/monthly-trend/ HTTP/1.1" 200 2
+INFO 2025-08-11 22:56:48,793 basehttp "GET /api/api/dashboard/recent-orders/?limit=5 HTTP/1.1" 200 2
+INFO 2025-08-11 22:56:48,842 basehttp "GET /api/api/dashboard/product-performance/?limit=5 HTTP/1.1" 200 2
+INFO 2025-08-11 22:56:48,843 basehttp "GET /api/api/dashboard/sales-chart/?days=7 HTTP/1.1" 200 2
+INFO 2025-08-11 22:56:48,860 basehttp "GET /api/api/dashboard/overview/ HTTP/1.1" 200 295
+INFO 2025-08-11 22:56:48,879 basehttp "GET /api/api/dashboard/payment-stats/?days=30 HTTP/1.1" 200 2
+INFO 2025-08-11 22:56:48,885 basehttp "GET /api/api/dashboard/monthly-trend/ HTTP/1.1" 200 2
+INFO 2025-08-11 22:56:48,918 basehttp "GET /api/api/dashboard/recent-orders/?limit=5 HTTP/1.1" 200 2
+INFO 2025-08-11 22:56:48,936 basehttp "GET /api/api/dashboard/low-stock/?threshold=10 HTTP/1.1" 200 145
+INFO 2025-08-11 22:57:00,823 basehttp "GET /api/products/add/features HTTP/1.1" 200 1057
+INFO 2025-08-11 22:57:00,826 basehttp "GET /api/products HTTP/1.1" 200 261
+INFO 2025-08-11 22:57:04,237 basehttp "GET /api/auth/verify HTTP/1.1" 200 66
+INFO 2025-08-11 22:57:04,420 basehttp "GET /api/api/dashboard/recent-orders/?limit=5 HTTP/1.1" 200 2
+INFO 2025-08-11 22:57:04,428 basehttp "GET /api/api/dashboard/sales-chart/?days=7 HTTP/1.1" 200 2
+INFO 2025-08-11 22:57:04,431 basehttp "GET /api/api/dashboard/product-performance/?limit=5 HTTP/1.1" 200 2
+INFO 2025-08-11 22:57:04,441 basehttp "GET /api/api/dashboard/payment-stats/?days=30 HTTP/1.1" 200 2
+INFO 2025-08-11 22:57:04,442 basehttp "GET /api/api/dashboard/low-stock/?threshold=10 HTTP/1.1" 200 145
+INFO 2025-08-11 22:57:04,511 basehttp "GET /api/api/dashboard/overview/ HTTP/1.1" 200 295
+INFO 2025-08-11 22:57:04,588 basehttp "GET /api/api/dashboard/monthly-trend/ HTTP/1.1" 200 2
+INFO 2025-08-11 22:57:05,322 basehttp "GET /api/products/add/features HTTP/1.1" 200 1057
+INFO 2025-08-11 22:57:05,322 basehttp "GET /api/products HTTP/1.1" 200 261
+INFO 2025-08-11 22:57:08,640 basehttp "GET /api/inventory HTTP/1.1" 200 455
+INFO 2025-08-11 22:57:10,435 basehttp "GET /api/products HTTP/1.1" 200 261
+INFO 2025-08-11 22:57:10,443 basehttp "GET /api/products/add/features HTTP/1.1" 200 1057
+INFO 2025-08-11 22:57:22,214 basehttp "OPTIONS /api/inventory/search/?sku=LEH-9362-S-ae2222-0694 HTTP/1.1" 200 0
+INFO 2025-08-11 22:57:22,281 basehttp "GET /api/inventory/search/?sku=LEH-9362-S-ae2222-0694 HTTP/1.1" 200 360
+INFO 2025-08-11 22:57:27,013 basehttp "OPTIONS /api/transactions/create HTTP/1.1" 200 0
+WARNING 2025-08-11 22:57:27,088 log Bad Request: /api/transactions/create
+WARNING 2025-08-11 22:57:27,088 basehttp "POST /api/transactions/create HTTP/1.1" 400 243
+WARNING 2025-08-11 22:57:28,795 log Bad Request: /api/transactions/create
+WARNING 2025-08-11 22:57:28,796 basehttp "POST /api/transactions/create HTTP/1.1" 400 243
+WARNING 2025-08-11 22:57:28,980 log Bad Request: /api/transactions/create
+WARNING 2025-08-11 22:57:28,981 basehttp "POST /api/transactions/create HTTP/1.1" 400 243
+WARNING 2025-08-11 22:57:29,126 log Bad Request: /api/transactions/create
+WARNING 2025-08-11 22:57:29,127 basehttp "POST /api/transactions/create HTTP/1.1" 400 243
+WARNING 2025-08-11 22:57:29,261 log Bad Request: /api/transactions/create
+WARNING 2025-08-11 22:57:29,262 basehttp "POST /api/transactions/create HTTP/1.1" 400 243
+WARNING 2025-08-11 22:57:29,432 log Bad Request: /api/transactions/create
+WARNING 2025-08-11 22:57:29,433 basehttp "POST /api/transactions/create HTTP/1.1" 400 243
+WARNING 2025-08-11 22:57:29,588 log Bad Request: /api/transactions/create
+WARNING 2025-08-11 22:57:29,588 basehttp "POST /api/transactions/create HTTP/1.1" 400 243
+WARNING 2025-08-11 22:57:29,781 log Bad Request: /api/transactions/create
+WARNING 2025-08-11 22:57:29,782 basehttp "POST /api/transactions/create HTTP/1.1" 400 243
+WARNING 2025-08-11 22:57:29,972 log Bad Request: /api/transactions/create
+WARNING 2025-08-11 22:57:29,973 basehttp "POST /api/transactions/create HTTP/1.1" 400 243
+WARNING 2025-08-11 22:57:30,214 log Bad Request: /api/transactions/create
+WARNING 2025-08-11 22:57:30,216 basehttp "POST /api/transactions/create HTTP/1.1" 400 243
+WARNING 2025-08-11 22:58:42,630 log Bad Request: /api/transactions/create
+WARNING 2025-08-11 22:58:42,630 basehttp "POST /api/transactions/create HTTP/1.1" 400 243
+INFO 2025-08-11 22:59:52,952 basehttp "GET /api/inventory/search/?sku=LEH-9362-S-ae2222-0694 HTTP/1.1" 200 360
+INFO 2025-08-11 22:59:54,562 basehttp "GET /api/inventory/search/?sku=LEH-9362-S-ae2222-0694 HTTP/1.1" 200 360
+INFO 2025-08-11 22:59:55,064 basehttp "GET /api/inventory/search/?sku=LEH-9362-S-ae2222-0694 HTTP/1.1" 200 360
+INFO 2025-08-11 22:59:55,362 basehttp "GET /api/inventory/search/?sku=LEH-9362-S-ae2222-0694 HTTP/1.1" 200 360
+INFO 2025-08-11 22:59:55,527 basehttp "GET /api/inventory/search/?sku=LEH-9362-S-ae2222-0694 HTTP/1.1" 200 360
+INFO 2025-08-11 23:00:14,387 basehttp "GET /api/inventory HTTP/1.1" 200 455
+INFO 2025-08-11 23:00:16,205 basehttp "GET /api/vendors/ HTTP/1.1" 200 214
+INFO 2025-08-11 23:08:07,265 autoreload E:\Gigs\Magavi\Maguva-Project\Manguva\admin_app\views.py changed, reloading.
+INFO 2025-08-11 23:08:08,146 autoreload Watching for file changes with StatReloader
+INFO 2025-08-11 23:08:27,499 basehttp "GET /api/products HTTP/1.1" 200 261
+INFO 2025-08-11 23:08:27,591 basehttp "GET /api/products/add/features HTTP/1.1" 200 1057
+INFO 2025-08-11 23:08:30,735 basehttp "GET /api/inventory HTTP/1.1" 200 455
+INFO 2025-08-11 23:08:38,556 basehttp "GET /api/products/add/features HTTP/1.1" 200 1057
+INFO 2025-08-11 23:08:38,556 basehttp "GET /api/products HTTP/1.1" 200 261
+INFO 2025-08-11 23:08:39,737 basehttp "OPTIONS /api/products/1/inventory HTTP/1.1" 200 0
+INFO 2025-08-11 23:08:39,807 basehttp "GET /api/products/1/inventory HTTP/1.1" 200 3875
+INFO 2025-08-11 23:08:47,533 basehttp "GET /api/inventory HTTP/1.1" 200 455
+INFO 2025-08-11 23:08:59,032 basehttp "GET /api/products/add/features HTTP/1.1" 200 1057
+INFO 2025-08-11 23:08:59,131 basehttp "GET /api/products HTTP/1.1" 200 261
+INFO 2025-08-11 23:08:59,514 basehttp "GET /api/inventory HTTP/1.1" 200 455
+INFO 2025-08-11 23:09:01,197 basehttp "GET /api/products/add/features HTTP/1.1" 200 1057
+INFO 2025-08-11 23:09:01,197 basehttp "GET /api/products HTTP/1.1" 200 261
+INFO 2025-08-11 23:09:02,362 basehttp "GET /api/products/1/inventory HTTP/1.1" 200 3875
+INFO 2025-08-11 23:09:08,498 basehttp "GET /api/inventory/search/?sku=LEH-9362-S-ae2222-0694 HTTP/1.1" 200 360
+WARNING 2025-08-11 23:09:17,011 log Bad Request: /api/transactions/create
+WARNING 2025-08-11 23:09:17,012 basehttp "POST /api/transactions/create HTTP/1.1" 400 243
+INFO 2025-08-11 23:10:45,108 basehttp "GET /api/products HTTP/1.1" 200 261
+INFO 2025-08-11 23:10:45,196 basehttp "GET /api/products/add/features HTTP/1.1" 200 1057
+INFO 2025-08-11 23:10:46,502 basehttp "GET /api/vendors/ HTTP/1.1" 200 214
+INFO 2025-08-11 23:10:47,319 basehttp "GET /api/products HTTP/1.1" 200 261
+INFO 2025-08-11 23:10:47,409 basehttp "GET /api/products/add/features HTTP/1.1" 200 1057
+INFO 2025-08-11 23:10:59,519 basehttp "GET /api/products/1/inventory HTTP/1.1" 200 3875
+INFO 2025-08-11 23:11:02,104 basehttp "GET /api/products/add/features HTTP/1.1" 200 1057
+INFO 2025-08-11 23:11:02,104 basehttp "GET /api/products HTTP/1.1" 200 261
+INFO 2025-08-11 23:11:03,059 basehttp "OPTIONS /api/products/1 HTTP/1.1" 200 0
+INFO 2025-08-11 23:11:03,119 views Product delete request ID: 1
+INFO 2025-08-11 23:11:03,134 basehttp "DELETE /api/products/1 HTTP/1.1" 204 0
+INFO 2025-08-11 23:11:03,200 basehttp "GET /api/products HTTP/1.1" 200 2
+INFO 2025-08-11 23:11:04,983 basehttp "GET /api/inventory HTTP/1.1" 200 2
+INFO 2025-08-11 23:11:05,997 basehttp "GET /api/products/add/features HTTP/1.1" 200 1057
+INFO 2025-08-11 23:11:05,999 basehttp "GET /api/products HTTP/1.1" 200 2
+INFO 2025-08-11 23:11:24,888 views Product creation request: {'vendor': 1, 'product_type': 'Bottom', 'fabric_type': 'Crepe', 'color_code': '#306cc1', 'base_price': 4235, 'markup_price': 4634, 'discount_percentage': 0, 'mrp': 8869}
+INFO 2025-08-11 23:11:24,900 basehttp "POST /api/products/add HTTP/1.1" 201 254
+INFO 2025-08-11 23:11:24,968 basehttp "GET /api/products HTTP/1.1" 200 256
+INFO 2025-08-11 23:11:28,193 basehttp "OPTIONS /api/products/2/inventory HTTP/1.1" 200 0
+INFO 2025-08-11 23:11:28,273 basehttp "GET /api/products/2/inventory HTTP/1.1" 200 258
+INFO 2025-08-11 23:11:30,065 basehttp "GET /api/inventory HTTP/1.1" 200 2
+INFO 2025-08-11 23:11:30,864 basehttp "GET /api/inventory/products HTTP/1.1" 200 54
+INFO 2025-08-11 23:11:43,039 basehttp "POST /api/products/add/inventory HTTP/1.1" 201 2011
+INFO 2025-08-11 23:11:43,112 basehttp "GET /api/inventory HTTP/1.1" 200 449
+INFO 2025-08-11 23:11:46,826 basehttp "GET /api/api/dashboard/recent-orders/?limit=5 HTTP/1.1" 200 2
+INFO 2025-08-11 23:11:46,851 basehttp "GET /api/api/dashboard/product-performance/?limit=5 HTTP/1.1" 200 2
+INFO 2025-08-11 23:11:46,861 basehttp "GET /api/api/dashboard/low-stock/?threshold=10 HTTP/1.1" 200 2
+INFO 2025-08-11 23:11:46,870 basehttp "GET /api/api/dashboard/payment-stats/?days=30 HTTP/1.1" 200 2
+INFO 2025-08-11 23:11:46,870 basehttp "GET /api/api/dashboard/sales-chart/?days=7 HTTP/1.1" 200 2
+INFO 2025-08-11 23:11:46,890 basehttp "GET /api/api/dashboard/overview/ HTTP/1.1" 200 295
+INFO 2025-08-11 23:11:46,926 basehttp "GET /api/api/dashboard/monthly-trend/ HTTP/1.1" 200 2
+INFO 2025-08-11 23:11:53,078 basehttp "GET /api/auth/verify HTTP/1.1" 200 66
+INFO 2025-08-11 23:11:53,313 basehttp "GET /api/api/dashboard/recent-orders/?limit=5 HTTP/1.1" 200 2
+INFO 2025-08-11 23:11:53,348 basehttp "GET /api/api/dashboard/sales-chart/?days=7 HTTP/1.1" 200 2
+INFO 2025-08-11 23:11:53,351 basehttp "GET /api/api/dashboard/payment-stats/?days=30 HTTP/1.1" 200 2
+INFO 2025-08-11 23:11:53,352 basehttp "GET /api/api/dashboard/low-stock/?threshold=10 HTTP/1.1" 200 2
+INFO 2025-08-11 23:11:53,354 basehttp "GET /api/api/dashboard/product-performance/?limit=5 HTTP/1.1" 200 2
+INFO 2025-08-11 23:11:53,357 basehttp "GET /api/api/dashboard/overview/ HTTP/1.1" 200 295
+INFO 2025-08-11 23:11:53,414 basehttp "GET /api/api/dashboard/monthly-trend/ HTTP/1.1" 200 2
+INFO 2025-08-11 23:11:53,588 basehttp "GET /api/api/dashboard/recent-orders/?limit=5 HTTP/1.1" 200 2
+INFO 2025-08-11 23:11:53,613 basehttp "GET /api/api/dashboard/sales-chart/?days=7 HTTP/1.1" 200 2
+INFO 2025-08-11 23:11:53,614 basehttp "GET /api/api/dashboard/product-performance/?limit=5 HTTP/1.1" 200 2
+INFO 2025-08-11 23:11:53,617 basehttp "GET /api/api/dashboard/payment-stats/?days=30 HTTP/1.1" 200 2
+INFO 2025-08-11 23:11:53,618 basehttp "GET /api/api/dashboard/low-stock/?threshold=10 HTTP/1.1" 200 2
+INFO 2025-08-11 23:11:53,688 basehttp "GET /api/api/dashboard/monthly-trend/ HTTP/1.1" 200 2
+INFO 2025-08-11 23:11:53,705 basehttp "GET /api/api/dashboard/overview/ HTTP/1.1" 200 295
+INFO 2025-08-11 23:11:56,875 basehttp "GET /api/products HTTP/1.1" 200 257
+INFO 2025-08-11 23:11:56,881 basehttp "GET /api/products/add/features HTTP/1.1" 200 1057
+INFO 2025-08-11 23:12:01,476 basehttp "GET /api/products HTTP/1.1" 200 257
+INFO 2025-08-11 23:12:01,580 basehttp "GET /api/products/add/features HTTP/1.1" 200 1057
+INFO 2025-08-11 23:12:01,980 basehttp "GET /api/inventory HTTP/1.1" 200 449
+INFO 2025-08-11 23:12:03,321 basehttp "GET /api/products HTTP/1.1" 200 257
+INFO 2025-08-11 23:12:03,322 basehttp "GET /api/products/add/features HTTP/1.1" 200 1057
+INFO 2025-08-11 23:12:04,550 basehttp "GET /api/products/2/inventory HTTP/1.1" 200 2267
+INFO 2025-08-11 23:12:08,235 basehttp "GET /api/inventory HTTP/1.1" 200 449
+INFO 2025-08-11 23:12:11,182 basehttp "OPTIONS /api/inventory/search/?sku=BOT-4424-S-306cc1-7647 HTTP/1.1" 200 0
+INFO 2025-08-11 23:12:11,245 basehttp "GET /api/inventory/search/?sku=BOT-4424-S-306cc1-7647 HTTP/1.1" 200 357
+INFO 2025-08-11 23:12:17,532 basehttp "POST /api/transactions/create HTTP/1.1" 201 601
+INFO 2025-08-11 23:12:43,376 basehttp "GET /api/api/dashboard/sales-chart/?days=7 HTTP/1.1" 200 63
+INFO 2025-08-11 23:12:43,376 basehttp "GET /api/api/dashboard/product-performance/?limit=5 HTTP/1.1" 200 142
+INFO 2025-08-11 23:12:43,377 basehttp "GET /api/api/dashboard/recent-orders/?limit=5 HTTP/1.1" 200 249
+INFO 2025-08-11 23:12:43,391 basehttp "GET /api/api/dashboard/payment-stats/?days=30 HTTP/1.1" 200 86
+INFO 2025-08-11 23:12:43,392 basehttp "GET /api/api/dashboard/overview/ HTTP/1.1" 200 319
+INFO 2025-08-11 23:12:43,466 basehttp "GET /api/api/dashboard/monthly-trend/ HTTP/1.1" 200 51
+INFO 2025-08-11 23:12:43,481 basehttp "GET /api/api/dashboard/low-stock/?threshold=10 HTTP/1.1" 200 2
+INFO 2025-08-11 23:12:50,331 basehttp "GET /api/inventory HTTP/1.1" 200 449
+INFO 2025-08-11 23:12:51,851 basehttp "GET /api/inventory HTTP/1.1" 200 449
+INFO 2025-08-11 23:12:53,892 basehttp "GET /api/products HTTP/1.1" 200 257
+INFO 2025-08-11 23:12:53,892 basehttp "GET /api/products/add/features HTTP/1.1" 200 1057
+INFO 2025-08-11 23:12:54,949 basehttp "GET /api/inventory HTTP/1.1" 200 449
+INFO 2025-08-11 23:12:56,175 basehttp "GET /api/products HTTP/1.1" 200 257
+INFO 2025-08-11 23:12:56,180 basehttp "GET /api/products/add/features HTTP/1.1" 200 1057
+INFO 2025-08-11 23:13:00,670 basehttp "GET /api/vendors/ HTTP/1.1" 200 214
+INFO 2025-08-11 23:13:02,680 basehttp "GET /api/api/dashboard/recent-orders/?limit=5 HTTP/1.1" 200 249
+INFO 2025-08-11 23:13:02,692 basehttp "GET /api/api/dashboard/payment-stats/?days=30 HTTP/1.1" 200 86
+INFO 2025-08-11 23:13:02,696 basehttp "GET /api/api/dashboard/low-stock/?threshold=10 HTTP/1.1" 200 2
+INFO 2025-08-11 23:13:02,774 basehttp "GET /api/api/dashboard/monthly-trend/ HTTP/1.1" 200 51
+INFO 2025-08-11 23:13:02,809 basehttp "GET /api/api/dashboard/product-performance/?limit=5 HTTP/1.1" 200 142
+INFO 2025-08-11 23:13:02,810 basehttp "GET /api/api/dashboard/sales-chart/?days=7 HTTP/1.1" 200 63
+INFO 2025-08-11 23:13:02,830 basehttp "GET /api/api/dashboard/overview/ HTTP/1.1" 200 319
+INFO 2025-08-11 23:13:26,431 basehttp "GET /api/vendors/ HTTP/1.1" 200 214
+INFO 2025-08-11 23:13:27,015 basehttp "GET /api/products/add/features HTTP/1.1" 200 1057
+INFO 2025-08-11 23:13:27,015 basehttp "GET /api/products HTTP/1.1" 200 257
+INFO 2025-08-11 23:13:27,453 basehttp "GET /api/inventory HTTP/1.1" 200 449
+INFO 2025-08-11 23:13:28,872 basehttp "GET /api/products/add/features HTTP/1.1" 200 1057
+INFO 2025-08-11 23:13:28,976 basehttp "GET /api/products HTTP/1.1" 200 257
+INFO 2025-08-11 23:13:29,330 basehttp "GET /api/inventory HTTP/1.1" 200 449
+INFO 2025-08-11 23:13:29,706 basehttp "GET /api/vendors/ HTTP/1.1" 200 214
+INFO 2025-08-11 23:13:30,030 basehttp "GET /api/api/dashboard/recent-orders/?limit=5 HTTP/1.1" 200 249
+INFO 2025-08-11 23:13:30,042 basehttp "GET /api/api/dashboard/sales-chart/?days=7 HTTP/1.1" 200 63
+INFO 2025-08-11 23:13:30,045 basehttp "GET /api/api/dashboard/payment-stats/?days=30 HTTP/1.1" 200 86
+INFO 2025-08-11 23:13:30,049 basehttp "GET /api/api/dashboard/product-performance/?limit=5 HTTP/1.1" 200 142
+INFO 2025-08-11 23:13:30,050 basehttp "GET /api/api/dashboard/low-stock/?threshold=10 HTTP/1.1" 200 2
+INFO 2025-08-11 23:13:30,116 basehttp "GET /api/api/dashboard/monthly-trend/ HTTP/1.1" 200 51
+INFO 2025-08-11 23:13:30,132 basehttp "GET /api/api/dashboard/overview/ HTTP/1.1" 200 319
+INFO 2025-08-11 23:13:51,139 basehttp "GET /api/inventory HTTP/1.1" 200 449
+INFO 2025-08-11 23:13:51,534 basehttp "GET /api/products HTTP/1.1" 200 257
+INFO 2025-08-11 23:13:51,631 basehttp "GET /api/products/add/features HTTP/1.1" 200 1057
+INFO 2025-08-11 23:13:52,670 basehttp "GET /api/vendors/ HTTP/1.1" 200 214
+INFO 2025-08-11 23:13:53,124 basehttp "GET /api/api/dashboard/recent-orders/?limit=5 HTTP/1.1" 200 249
+INFO 2025-08-11 23:13:53,125 basehttp "GET /api/api/dashboard/sales-chart/?days=7 HTTP/1.1" 200 63
+INFO 2025-08-11 23:13:53,135 basehttp "GET /api/api/dashboard/low-stock/?threshold=10 HTTP/1.1" 200 2
+INFO 2025-08-11 23:13:53,139 basehttp "GET /api/api/dashboard/payment-stats/?days=30 HTTP/1.1" 200 86
+INFO 2025-08-11 23:13:53,142 basehttp "GET /api/api/dashboard/overview/ HTTP/1.1" 200 319
+INFO 2025-08-11 23:13:53,202 basehttp "GET /api/api/dashboard/monthly-trend/ HTTP/1.1" 200 51
+INFO 2025-08-11 23:13:53,212 basehttp "GET /api/api/dashboard/product-performance/?limit=5 HTTP/1.1" 200 142
+INFO 2025-08-11 23:14:00,609 basehttp "GET /api/inventory HTTP/1.1" 200 449
+INFO 2025-08-11 23:14:01,522 basehttp "GET /api/products/add/features HTTP/1.1" 200 1057
+INFO 2025-08-11 23:14:01,618 basehttp "GET /api/products HTTP/1.1" 200 257
+INFO 2025-08-11 23:14:07,864 basehttp "GET /api/products HTTP/1.1" 200 257
+INFO 2025-08-11 23:14:07,864 basehttp "GET /api/products/add/features HTTP/1.1" 200 1057
+INFO 2025-08-11 23:14:09,122 basehttp "OPTIONS /api/products/2/inventory HTTP/1.1" 200 0
+INFO 2025-08-11 23:14:09,189 basehttp "GET /api/products/2/inventory HTTP/1.1" 200 2177
+INFO 2025-08-11 23:14:18,159 basehttp "OPTIONS /api/inventory/search/?sku=BOT-4424-M-306cc1-3998 HTTP/1.1" 200 0
+INFO 2025-08-11 23:14:18,217 basehttp "GET /api/inventory/search/?sku=BOT-4424-M-306cc1-3998 HTTP/1.1" 200 357
+INFO 2025-08-11 23:14:25,347 basehttp "POST /api/transactions/create HTTP/1.1" 201 605
+INFO 2025-08-11 23:14:33,701 basehttp "GET /api/products HTTP/1.1" 200 257
+INFO 2025-08-11 23:14:33,820 basehttp "GET /api/products/add/features HTTP/1.1" 200 1057
+INFO 2025-08-11 23:14:38,842 basehttp "GET /api/api/dashboard/sales-chart/?days=7 HTTP/1.1" 200 63
+INFO 2025-08-11 23:14:38,844 basehttp "GET /api/api/dashboard/product-performance/?limit=5 HTTP/1.1" 200 283
+INFO 2025-08-11 23:14:38,859 basehttp "GET /api/api/dashboard/low-stock/?threshold=10 HTTP/1.1" 200 2
+INFO 2025-08-11 23:14:38,859 basehttp "GET /api/api/dashboard/overview/ HTTP/1.1" 200 319
+INFO 2025-08-11 23:14:38,915 basehttp "GET /api/api/dashboard/monthly-trend/ HTTP/1.1" 200 51
+INFO 2025-08-11 23:14:38,940 basehttp "GET /api/api/dashboard/recent-orders/?limit=5 HTTP/1.1" 200 501
+INFO 2025-08-11 23:14:38,950 basehttp "GET /api/api/dashboard/payment-stats/?days=30 HTTP/1.1" 200 170
+INFO 2025-08-11 23:14:50,701 basehttp "GET /api/vendors/ HTTP/1.1" 200 214
+INFO 2025-08-11 23:14:51,278 basehttp "GET /api/products HTTP/1.1" 200 257
+INFO 2025-08-11 23:14:51,383 basehttp "GET /api/products/add/features HTTP/1.1" 200 1057
+INFO 2025-08-11 23:14:51,999 basehttp "GET /api/inventory HTTP/1.1" 200 449
+INFO 2025-08-11 23:14:54,009 basehttp "GET /api/vendors/ HTTP/1.1" 200 214
+WARNING 2025-08-11 23:16:06,907 log Unauthorized: /api/auth/verify
+WARNING 2025-08-11 23:16:06,908 basehttp "GET /api/auth/verify HTTP/1.1" 401 58
+WARNING 2025-08-11 23:16:06,933 log Not Found: /api/logout
+WARNING 2025-08-11 23:16:06,934 basehttp "POST /api/logout HTTP/1.1" 404 9259
+INFO 2025-08-11 23:16:21,618 basehttp "POST /api/login HTTP/1.1" 200 309
+INFO 2025-08-11 23:16:21,876 basehttp "GET /api/api/dashboard/sales-chart/?days=7 HTTP/1.1" 200 63
+INFO 2025-08-11 23:16:21,880 basehttp "GET /api/api/dashboard/recent-orders/?limit=5 HTTP/1.1" 200 501
+INFO 2025-08-11 23:16:21,881 basehttp "GET /api/api/dashboard/product-performance/?limit=5 HTTP/1.1" 200 283
+INFO 2025-08-11 23:16:21,886 basehttp "GET /api/api/dashboard/low-stock/?threshold=10 HTTP/1.1" 200 2
+INFO 2025-08-11 23:16:21,890 basehttp "GET /api/api/dashboard/overview/ HTTP/1.1" 200 319
+INFO 2025-08-11 23:16:21,978 basehttp "GET /api/api/dashboard/monthly-trend/ HTTP/1.1" 200 51
+INFO 2025-08-11 23:16:21,983 basehttp "GET /api/api/dashboard/payment-stats/?days=30 HTTP/1.1" 200 170
+WARNING 2025-08-11 23:16:32,497 log Unauthorized: /api/auth/verify
+WARNING 2025-08-11 23:16:32,498 basehttp "GET /api/auth/verify HTTP/1.1" 401 58
+WARNING 2025-08-11 23:16:32,520 log Not Found: /api/logout
+WARNING 2025-08-11 23:16:32,525 basehttp "POST /api/logout HTTP/1.1" 404 9259
+INFO 2025-08-11 23:16:35,241 basehttp "POST /api/login HTTP/1.1" 200 309
+INFO 2025-08-11 23:16:35,544 basehttp "GET /api/api/dashboard/product-performance/?limit=5 HTTP/1.1" 200 283
+INFO 2025-08-11 23:16:35,553 basehttp "GET /api/api/dashboard/sales-chart/?days=7 HTTP/1.1" 200 63
+INFO 2025-08-11 23:16:35,562 basehttp "GET /api/api/dashboard/payment-stats/?days=30 HTTP/1.1" 200 170
+INFO 2025-08-11 23:16:35,567 basehttp "GET /api/api/dashboard/recent-orders/?limit=5 HTTP/1.1" 200 501
+INFO 2025-08-11 23:16:35,567 basehttp "GET /api/api/dashboard/overview/ HTTP/1.1" 200 319
+INFO 2025-08-11 23:16:35,642 basehttp "GET /api/api/dashboard/low-stock/?threshold=10 HTTP/1.1" 200 2
+INFO 2025-08-11 23:16:35,642 basehttp "GET /api/api/dashboard/monthly-trend/ HTTP/1.1" 200 51
+INFO 2025-08-11 23:16:37,074 basehttp "GET /api/auth/verify HTTP/1.1" 200 66
+INFO 2025-08-11 23:16:37,265 basehttp "GET /api/auth/verify HTTP/1.1" 200 66
+INFO 2025-08-11 23:17:00,968 basehttp "GET /api/auth/verify HTTP/1.1" 200 66
+INFO 2025-08-11 23:17:01,027 basehttp "GET /api/auth/verify HTTP/1.1" 200 66
+INFO 2025-08-11 23:17:04,181 basehttp "GET /api/auth/verify HTTP/1.1" 200 66
+INFO 2025-08-11 23:17:04,270 basehttp "GET /api/auth/verify HTTP/1.1" 200 66
+INFO 2025-08-11 23:17:12,308 basehttp "GET /api/vendors/ HTTP/1.1" 200 214
+INFO 2025-08-11 23:17:13,170 basehttp "GET /api/products/add/features HTTP/1.1" 200 1057
+INFO 2025-08-11 23:17:13,174 basehttp "GET /api/products HTTP/1.1" 200 257
+INFO 2025-08-11 23:17:13,788 basehttp "GET /api/inventory HTTP/1.1" 200 449
+INFO 2025-08-11 23:17:16,565 basehttp "GET /api/inventory HTTP/1.1" 200 449
+INFO 2025-08-11 23:17:17,095 basehttp "GET /api/products/add/features HTTP/1.1" 200 1057
+INFO 2025-08-11 23:17:17,098 basehttp "GET /api/products HTTP/1.1" 200 257
+INFO 2025-08-11 23:17:17,495 basehttp "GET /api/vendors/ HTTP/1.1" 200 214
+INFO 2025-08-11 23:17:17,733 basehttp "GET /api/api/dashboard/product-performance/?limit=5 HTTP/1.1" 200 283
+INFO 2025-08-11 23:17:17,749 basehttp "GET /api/api/dashboard/low-stock/?threshold=10 HTTP/1.1" 200 2
+INFO 2025-08-11 23:17:17,749 basehttp "GET /api/api/dashboard/payment-stats/?days=30 HTTP/1.1" 200 170
+INFO 2025-08-11 23:17:17,837 basehttp "GET /api/api/dashboard/sales-chart/?days=7 HTTP/1.1" 200 63
+INFO 2025-08-11 23:17:17,842 basehttp "GET /api/api/dashboard/recent-orders/?limit=5 HTTP/1.1" 200 501
+INFO 2025-08-11 23:17:17,857 basehttp "GET /api/api/dashboard/overview/ HTTP/1.1" 200 319
+INFO 2025-08-11 23:17:17,901 basehttp "GET /api/api/dashboard/monthly-trend/ HTTP/1.1" 200 51
+INFO 2025-08-11 23:17:21,650 basehttp "GET /api/inventory HTTP/1.1" 200 449
+INFO 2025-08-11 23:17:22,407 basehttp "GET /api/products HTTP/1.1" 200 257
+INFO 2025-08-11 23:17:22,409 basehttp "GET /api/products/add/features HTTP/1.1" 200 1057
+INFO 2025-08-11 23:17:24,185 basehttp "GET /api/vendors/ HTTP/1.1" 200 214
+INFO 2025-08-11 23:17:28,281 basehttp "GET /api/api/dashboard/sales-chart/?days=7 HTTP/1.1" 200 63
+INFO 2025-08-11 23:17:28,283 basehttp "GET /api/api/dashboard/product-performance/?limit=5 HTTP/1.1" 200 283
+INFO 2025-08-11 23:17:28,290 basehttp "GET /api/api/dashboard/recent-orders/?limit=5 HTTP/1.1" 200 501
+INFO 2025-08-11 23:17:28,290 basehttp "GET /api/api/dashboard/low-stock/?threshold=10 HTTP/1.1" 200 2
+INFO 2025-08-11 23:17:28,292 basehttp "GET /api/api/dashboard/payment-stats/?days=30 HTTP/1.1" 200 170
+INFO 2025-08-11 23:17:28,302 basehttp "GET /api/api/dashboard/overview/ HTTP/1.1" 200 319
+INFO 2025-08-11 23:17:28,368 basehttp "GET /api/api/dashboard/monthly-trend/ HTTP/1.1" 200 51
+INFO 2025-08-11 23:17:30,617 basehttp "GET /api/auth/verify HTTP/1.1" 200 66
+INFO 2025-08-11 23:17:30,702 basehttp "GET /api/auth/verify HTTP/1.1" 200 66
+INFO 2025-08-11 23:17:31,307 basehttp "GET /api/vendors/ HTTP/1.1" 200 214
+INFO 2025-08-11 23:17:32,160 basehttp "GET /api/api/dashboard/sales-chart/?days=7 HTTP/1.1" 200 63
+INFO 2025-08-11 23:17:32,172 basehttp "GET /api/api/dashboard/recent-orders/?limit=5 HTTP/1.1" 200 501
+INFO 2025-08-11 23:17:32,173 basehttp "GET /api/api/dashboard/low-stock/?threshold=10 HTTP/1.1" 200 2
+INFO 2025-08-11 23:17:32,185 basehttp "GET /api/api/dashboard/payment-stats/?days=30 HTTP/1.1" 200 170
+INFO 2025-08-11 23:17:32,185 basehttp "GET /api/api/dashboard/overview/ HTTP/1.1" 200 319
+INFO 2025-08-11 23:17:32,244 basehttp "GET /api/api/dashboard/monthly-trend/ HTTP/1.1" 200 51
+INFO 2025-08-11 23:17:32,249 basehttp "GET /api/api/dashboard/product-performance/?limit=5 HTTP/1.1" 200 283
+INFO 2025-08-11 23:17:33,670 basehttp "GET /api/auth/verify HTTP/1.1" 200 66
+INFO 2025-08-11 23:17:33,734 basehttp "GET /api/auth/verify HTTP/1.1" 200 66
+INFO 2025-08-11 23:18:00,357 basehttp "GET /api/inventory HTTP/1.1" 200 449
+INFO 2025-08-11 23:18:01,113 basehttp "GET /api/products HTTP/1.1" 200 257
+INFO 2025-08-11 23:18:01,114 basehttp "GET /api/products/add/features HTTP/1.1" 200 1057
+INFO 2025-08-11 23:18:19,628 basehttp "GET /api/inventory HTTP/1.1" 200 449
+INFO 2025-08-11 23:18:20,080 basehttp "GET /api/vendors/ HTTP/1.1" 200 214
+INFO 2025-08-11 23:18:20,822 basehttp "GET /api/api/dashboard/sales-chart/?days=7 HTTP/1.1" 200 63
+INFO 2025-08-11 23:18:20,837 basehttp "GET /api/api/dashboard/product-performance/?limit=5 HTTP/1.1" 200 283
+INFO 2025-08-11 23:18:20,840 basehttp "GET /api/api/dashboard/recent-orders/?limit=5 HTTP/1.1" 200 501
+INFO 2025-08-11 23:18:20,845 basehttp "GET /api/api/dashboard/low-stock/?threshold=10 HTTP/1.1" 200 2
+INFO 2025-08-11 23:18:20,846 basehttp "GET /api/api/dashboard/payment-stats/?days=30 HTTP/1.1" 200 170
+INFO 2025-08-11 23:18:20,847 basehttp "GET /api/api/dashboard/overview/ HTTP/1.1" 200 319
+INFO 2025-08-11 23:18:20,903 basehttp "GET /api/api/dashboard/monthly-trend/ HTTP/1.1" 200 51
+INFO 2025-08-12 16:33:07,788 autoreload Watching for file changes with StatReloader
+INFO 2025-08-12 16:34:17,518 basehttp "OPTIONS /api/auth/verify HTTP/1.1" 200 0
+INFO 2025-08-12 16:34:17,625 basehttp "GET /api/auth/verify HTTP/1.1" 200 66
+INFO 2025-08-12 16:34:17,835 basehttp "OPTIONS /api/api/dashboard/overview/ HTTP/1.1" 200 0
+INFO 2025-08-12 16:34:17,838 basehttp "OPTIONS /api/api/dashboard/recent-orders/?limit=5 HTTP/1.1" 200 0
+INFO 2025-08-12 16:34:17,847 basehttp "OPTIONS /api/api/dashboard/sales-chart/?days=7 HTTP/1.1" 200 0
+INFO 2025-08-12 16:34:17,848 basehttp "OPTIONS /api/api/dashboard/monthly-trend/ HTTP/1.1" 200 0
+INFO 2025-08-12 16:34:17,848 basehttp "OPTIONS /api/api/dashboard/product-performance/?limit=5 HTTP/1.1" 200 0
+INFO 2025-08-12 16:34:17,848 basehttp "OPTIONS /api/api/dashboard/payment-stats/?days=30 HTTP/1.1" 200 0
+INFO 2025-08-12 16:34:17,849 basehttp "OPTIONS /api/api/dashboard/low-stock/?threshold=10 HTTP/1.1" 200 0
+INFO 2025-08-12 16:34:17,962 basehttp "GET /api/api/dashboard/product-performance/?limit=5 HTTP/1.1" 200 283
+INFO 2025-08-12 16:34:17,979 basehttp "GET /api/api/dashboard/monthly-trend/ HTTP/1.1" 200 51
+INFO 2025-08-12 16:34:17,979 basehttp "GET /api/api/dashboard/payment-stats/?days=30 HTTP/1.1" 200 170
+INFO 2025-08-12 16:34:17,981 basehttp "GET /api/api/dashboard/sales-chart/?days=7 HTTP/1.1" 200 63
+INFO 2025-08-12 16:34:18,000 basehttp "GET /api/api/dashboard/overview/ HTTP/1.1" 200 319
+INFO 2025-08-12 16:34:18,041 basehttp "GET /api/api/dashboard/recent-orders/?limit=5 HTTP/1.1" 200 501
+INFO 2025-08-12 16:34:18,064 basehttp "GET /api/api/dashboard/low-stock/?threshold=10 HTTP/1.1" 200 2
+INFO 2025-08-12 16:34:26,114 basehttp "OPTIONS /api/vendors HTTP/1.1" 200 0
+INFO 2025-08-12 16:34:26,119 basehttp "OPTIONS /api/vendors/ HTTP/1.1" 200 0
+INFO 2025-08-12 16:34:26,187 basehttp "GET /api/vendors/ HTTP/1.1" 200 214
+INFO 2025-08-12 16:34:36,642 basehttp "GET /api/api/dashboard/overview/ HTTP/1.1" 200 319
+INFO 2025-08-12 16:34:36,645 basehttp "GET /api/api/dashboard/payment-stats/?days=30 HTTP/1.1" 200 170
+INFO 2025-08-12 16:34:36,722 basehttp "GET /api/api/dashboard/monthly-trend/ HTTP/1.1" 200 51
+INFO 2025-08-12 16:34:36,729 basehttp "GET /api/api/dashboard/recent-orders/?limit=5 HTTP/1.1" 200 501
+INFO 2025-08-12 16:34:36,743 basehttp "GET /api/api/dashboard/product-performance/?limit=5 HTTP/1.1" 200 283
+INFO 2025-08-12 16:34:36,747 basehttp "GET /api/api/dashboard/sales-chart/?days=7 HTTP/1.1" 200 63
+INFO 2025-08-12 16:34:36,747 basehttp "GET /api/api/dashboard/low-stock/?threshold=10 HTTP/1.1" 200 2
+INFO 2025-08-12 16:35:00,588 basehttp "GET /api/vendors/ HTTP/1.1" 200 214
+INFO 2025-08-12 16:56:13,762 basehttp "GET /api/auth/verify HTTP/1.1" 200 66
+INFO 2025-08-12 16:56:13,923 basehttp "GET /api/vendors/ HTTP/1.1" 200 214
+INFO 2025-08-12 16:56:14,084 basehttp "GET /api/api/dashboard/sales-chart/?days=7 HTTP/1.1" 200 63
+INFO 2025-08-12 16:56:14,086 basehttp "GET /api/api/dashboard/recent-orders/?limit=5 HTTP/1.1" 200 501
+INFO 2025-08-12 16:56:14,092 basehttp "GET /api/api/dashboard/product-performance/?limit=5 HTTP/1.1" 200 283
+INFO 2025-08-12 16:56:14,103 basehttp "GET /api/api/dashboard/overview/ HTTP/1.1" 200 319
+INFO 2025-08-12 16:56:14,107 basehttp "GET /api/api/dashboard/low-stock/?threshold=10 HTTP/1.1" 200 2
+INFO 2025-08-12 16:56:14,107 basehttp "GET /api/api/dashboard/payment-stats/?days=30 HTTP/1.1" 200 170
+INFO 2025-08-12 16:56:14,162 basehttp "GET /api/api/dashboard/monthly-trend/ HTTP/1.1" 200 51
+INFO 2025-08-12 16:56:16,373 basehttp "GET /api/vendors/ HTTP/1.1" 200 214
+INFO 2025-08-12 16:57:51,735 basehttp "OPTIONS /api/vendors/add HTTP/1.1" 200 0
+INFO 2025-08-12 16:57:51,801 views Vendor creation request by user admin@admin.com
+INFO 2025-08-12 16:57:51,852 basehttp "POST /api/vendors/add HTTP/1.1" 201 233
+INFO 2025-08-12 16:57:51,941 basehttp "GET /api/vendors/ HTTP/1.1" 200 448
+INFO 2025-08-12 16:58:34,305 views Vendor creation request by user admin@admin.com
+INFO 2025-08-12 16:58:34,309 basehttp "POST /api/vendors/add HTTP/1.1" 201 223
+INFO 2025-08-12 16:58:34,399 basehttp "GET /api/vendors/ HTTP/1.1" 200 672
+INFO 2025-08-12 16:59:14,955 views Vendor creation request by user admin@admin.com
+INFO 2025-08-12 16:59:14,958 basehttp "POST /api/vendors/add HTTP/1.1" 201 227
+INFO 2025-08-12 16:59:15,058 basehttp "GET /api/vendors/ HTTP/1.1" 200 900
+INFO 2025-08-12 16:59:20,722 basehttp "OPTIONS /api/products HTTP/1.1" 200 0
+INFO 2025-08-12 16:59:20,723 basehttp "OPTIONS /api/products/add/features HTTP/1.1" 200 0
+INFO 2025-08-12 16:59:20,792 basehttp "GET /api/products/add/features HTTP/1.1" 200 1743
+INFO 2025-08-12 16:59:20,792 basehttp "GET /api/products HTTP/1.1" 200 257
+INFO 2025-08-12 17:00:38,926 basehttp "OPTIONS /api/products/add HTTP/1.1" 200 0
+INFO 2025-08-12 17:00:38,979 views Product creation request: {'vendor': 2, 'product_type': 'Kurti', 'fabric_type': 'Chiffon', 'color_code': '#ff5733', 'base_price': 500, 'markup_price': 650, 'discount_percentage': 10, 'mrp': 1150}
+INFO 2025-08-12 17:00:38,988 basehttp "POST /api/products/add HTTP/1.1" 201 266
+INFO 2025-08-12 17:00:39,056 basehttp "GET /api/products HTTP/1.1" 200 524
+INFO 2025-08-12 17:01:10,773 views Product creation request: {'vendor': 3, 'product_type': 'Dupatta', 'fabric_type': 'Georgette', 'color_code': '#239030', 'base_price': 654, 'markup_price': 234, 'discount_percentage': 0, 'mrp': 888}
+INFO 2025-08-12 17:01:10,783 basehttp "POST /api/products/add HTTP/1.1" 201 267
+INFO 2025-08-12 17:01:10,849 basehttp "GET /api/products HTTP/1.1" 200 792
+INFO 2025-08-12 17:01:40,995 views Product creation request: {'vendor': 4, 'product_type': 'Top', 'fabric_type': 'Polyester', 'color_code': '#4cc4c4', 'base_price': 654, 'markup_price': 232, 'discount_percentage': 0, 'mrp': 886}
+INFO 2025-08-12 17:01:41,006 basehttp "POST /api/products/add HTTP/1.1" 201 260
+INFO 2025-08-12 17:01:41,067 basehttp "GET /api/products HTTP/1.1" 200 1053
+INFO 2025-08-12 17:02:15,309 views Product creation request: {'vendor': 3, 'product_type': 'Lehenga', 'fabric_type': 'Linen', 'color_code': '#14f0a4', 'base_price': 987, 'markup_price': 234, 'discount_percentage': 0, 'mrp': 1221}
+INFO 2025-08-12 17:02:15,320 basehttp "POST /api/products/add HTTP/1.1" 201 264
+INFO 2025-08-12 17:02:15,488 basehttp "GET /api/products HTTP/1.1" 200 1318
+INFO 2025-08-12 17:02:21,369 basehttp "OPTIONS /api/inventory HTTP/1.1" 200 0
+INFO 2025-08-12 17:02:21,437 basehttp "GET /api/inventory HTTP/1.1" 200 449
+INFO 2025-08-12 17:02:23,682 basehttp "OPTIONS /api/inventory/products HTTP/1.1" 200 0
+INFO 2025-08-12 17:02:23,841 basehttp "GET /api/inventory/products HTTP/1.1" 200 306
+INFO 2025-08-12 17:02:34,410 basehttp "OPTIONS /api/products/add/inventory HTTP/1.1" 200 0
+INFO 2025-08-12 17:02:34,524 basehttp "POST /api/products/add/inventory HTTP/1.1" 201 2457
+INFO 2025-08-12 17:02:34,587 basehttp "GET /api/inventory HTTP/1.1" 200 952
+INFO 2025-08-12 17:02:36,256 basehttp "GET /api/inventory/products HTTP/1.1" 200 306
+INFO 2025-08-12 17:02:50,430 basehttp "POST /api/products/add/inventory HTTP/1.1" 201 2389
+INFO 2025-08-12 17:02:50,489 basehttp "GET /api/inventory HTTP/1.1" 200 1460
+INFO 2025-08-12 17:02:54,377 basehttp "GET /api/inventory/products HTTP/1.1" 200 306
+INFO 2025-08-12 17:03:08,228 basehttp "POST /api/products/add/inventory HTTP/1.1" 201 2488
+INFO 2025-08-12 17:03:08,292 basehttp "GET /api/inventory HTTP/1.1" 200 1933
+INFO 2025-08-12 17:03:11,269 basehttp "GET /api/inventory/products HTTP/1.1" 200 306
+INFO 2025-08-12 17:03:18,879 basehttp "GET /api/products/add/features HTTP/1.1" 200 1743
+INFO 2025-08-12 17:03:18,884 basehttp "GET /api/products HTTP/1.1" 200 1321
+INFO 2025-08-12 17:03:23,054 basehttp "GET /api/inventory HTTP/1.1" 200 1933
+INFO 2025-08-12 17:03:23,935 basehttp "GET /api/inventory/products HTTP/1.1" 200 306
+INFO 2025-08-12 17:03:33,809 basehttp "POST /api/products/add/inventory HTTP/1.1" 201 2484
+INFO 2025-08-12 17:03:33,878 basehttp "GET /api/inventory HTTP/1.1" 200 2441
+INFO 2025-08-12 17:03:47,975 basehttp "GET /api/inventory HTTP/1.1" 200 2441
+INFO 2025-08-12 17:03:49,237 basehttp "GET /api/products HTTP/1.1" 200 1322
+INFO 2025-08-12 17:03:49,338 basehttp "GET /api/products/add/features HTTP/1.1" 200 1743
+INFO 2025-08-12 17:03:50,304 basehttp "GET /api/vendors/ HTTP/1.1" 200 900
+INFO 2025-08-12 17:03:51,702 basehttp "GET /api/products/add/features HTTP/1.1" 200 1743
+INFO 2025-08-12 17:03:51,706 basehttp "GET /api/products HTTP/1.1" 200 1322
+INFO 2025-08-12 17:03:55,769 basehttp "GET /api/inventory HTTP/1.1" 200 2441
+INFO 2025-08-12 17:04:00,016 basehttp "GET /api/products/add/features HTTP/1.1" 200 1743
+INFO 2025-08-12 17:04:00,020 basehttp "GET /api/products HTTP/1.1" 200 1322
+INFO 2025-08-12 17:04:01,979 basehttp "OPTIONS /api/products/6/inventory HTTP/1.1" 200 0
+INFO 2025-08-12 17:04:02,040 basehttp "GET /api/products/6/inventory HTTP/1.1" 200 2762
+INFO 2025-08-12 17:04:11,145 basehttp "GET /api/products/add/features HTTP/1.1" 200 1743
+INFO 2025-08-12 17:04:11,147 basehttp "GET /api/products HTTP/1.1" 200 1322
+INFO 2025-08-12 17:29:30,671 basehttp "GET /api/api/dashboard/recent-orders/?limit=5 HTTP/1.1" 200 501
+INFO 2025-08-12 17:29:30,672 basehttp "GET /api/api/dashboard/sales-chart/?days=7 HTTP/1.1" 200 63
+INFO 2025-08-12 17:29:30,676 basehttp "GET /api/api/dashboard/product-performance/?limit=5 HTTP/1.1" 200 283
+INFO 2025-08-12 17:29:30,684 basehttp "GET /api/api/dashboard/low-stock/?threshold=10 HTTP/1.1" 200 2
+INFO 2025-08-12 17:29:30,684 basehttp "GET /api/api/dashboard/payment-stats/?days=30 HTTP/1.1" 200 170
+INFO 2025-08-12 17:29:30,739 basehttp "GET /api/api/dashboard/monthly-trend/ HTTP/1.1" 200 51
+INFO 2025-08-12 17:29:30,765 basehttp "GET /api/api/dashboard/overview/ HTTP/1.1" 200 319
+INFO 2025-08-12 17:37:05,985 basehttp "GET /api/vendors/ HTTP/1.1" 200 900
+INFO 2025-08-12 17:37:06,733 basehttp "GET /api/products/add/features HTTP/1.1" 200 1743
+INFO 2025-08-12 17:37:06,735 basehttp "GET /api/products HTTP/1.1" 200 1322
+INFO 2025-08-12 17:37:07,473 basehttp "GET /api/inventory HTTP/1.1" 200 2441
+INFO 2025-08-12 17:37:14,170 basehttp "GET /api/inventory HTTP/1.1" 200 2441
+INFO 2025-08-12 17:37:15,634 basehttp "GET /api/products/add/features HTTP/1.1" 200 1743
+INFO 2025-08-12 17:37:15,637 basehttp "GET /api/products HTTP/1.1" 200 1322
+INFO 2025-08-12 17:37:17,574 basehttp "GET /api/products/6/inventory HTTP/1.1" 200 2762
+INFO 2025-08-12 17:37:23,622 basehttp "GET /api/inventory HTTP/1.1" 200 2441
+INFO 2025-08-12 17:37:25,039 basehttp "GET /api/products/add/features HTTP/1.1" 200 1743
+INFO 2025-08-12 17:37:25,042 basehttp "GET /api/products HTTP/1.1" 200 1322
+INFO 2025-08-12 17:37:26,220 basehttp "OPTIONS /api/products/5/inventory HTTP/1.1" 200 0
+INFO 2025-08-12 17:37:26,277 basehttp "GET /api/products/5/inventory HTTP/1.1" 200 2762
+INFO 2025-08-12 17:37:33,801 basehttp "GET /api/products/add/features HTTP/1.1" 200 1743
+INFO 2025-08-12 17:37:33,905 basehttp "GET /api/products HTTP/1.1" 200 1322
+INFO 2025-08-12 17:37:37,726 basehttp "OPTIONS /api/products/2/inventory HTTP/1.1" 200 0
+INFO 2025-08-12 17:37:37,784 basehttp "GET /api/products/2/inventory HTTP/1.1" 200 2087
+INFO 2025-08-12 17:37:48,141 basehttp "OPTIONS /api/inventory/search/?sku=BOT-4424-S-306cc1-5044 HTTP/1.1" 200 0
+INFO 2025-08-12 17:37:48,210 basehttp "GET /api/inventory/search/?sku=BOT-4424-S-306cc1-5044 HTTP/1.1" 200 357
+INFO 2025-08-12 17:37:53,885 basehttp "OPTIONS /api/inventory/search/?sku=TOP-9444-S-4cc4c4-0316 HTTP/1.1" 200 0
+INFO 2025-08-12 17:37:53,944 basehttp "GET /api/inventory/search/?sku=TOP-9444-S-4cc4c4-0316 HTTP/1.1" 200 364
+INFO 2025-08-12 17:38:00,137 basehttp "OPTIONS /api/inventory/search/?sku=LEH-2645-S-14f0a4-6512 HTTP/1.1" 200 0
+INFO 2025-08-12 17:38:00,202 basehttp "GET /api/inventory/search/?sku=LEH-2645-S-14f0a4-6512 HTTP/1.1" 200 368
+INFO 2025-08-12 17:38:02,391 basehttp "GET /api/inventory/search/?sku=LEH-2645-S-14f0a4-6512 HTTP/1.1" 200 368
+INFO 2025-08-12 17:38:02,932 basehttp "GET /api/inventory/search/?sku=LEH-2645-S-14f0a4-6512 HTTP/1.1" 200 368
+INFO 2025-08-12 17:38:02,987 basehttp "GET /api/inventory/search/?sku=LEH-2645-S-14f0a4-6512 HTTP/1.1" 200 368
+INFO 2025-08-12 17:38:23,541 basehttp "OPTIONS /api/transactions/create HTTP/1.1" 200 0
+INFO 2025-08-12 17:38:23,612 basehttp "POST /api/transactions/create HTTP/1.1" 201 990
+INFO 2025-08-12 17:38:36,253 basehttp "GET /api/api/dashboard/sales-chart/?days=7 HTTP/1.1" 200 125
+INFO 2025-08-12 17:38:36,271 basehttp "GET /api/api/dashboard/payment-stats/?days=30 HTTP/1.1" 200 171
+INFO 2025-08-12 17:38:36,271 basehttp "GET /api/api/dashboard/product-performance/?limit=5 HTTP/1.1" 200 702
+INFO 2025-08-12 17:38:36,272 basehttp "GET /api/api/dashboard/low-stock/?threshold=10 HTTP/1.1" 200 2
+INFO 2025-08-12 17:38:36,273 basehttp "GET /api/api/dashboard/recent-orders/?limit=5 HTTP/1.1" 200 749
+INFO 2025-08-12 17:38:36,277 basehttp "GET /api/api/dashboard/overview/ HTTP/1.1" 200 319
+INFO 2025-08-12 17:38:36,325 basehttp "GET /api/api/dashboard/monthly-trend/ HTTP/1.1" 200 51
+INFO 2025-08-13 12:27:42,943 autoreload Watching for file changes with StatReloader
+WARNING 2025-08-13 12:28:10,408 log Unauthorized: /api/auth/verify
+WARNING 2025-08-13 12:28:10,409 basehttp "GET /api/auth/verify HTTP/1.1" 401 58
+WARNING 2025-08-13 12:28:10,472 log Not Found: /api/logout
+WARNING 2025-08-13 12:28:10,473 basehttp "POST /api/logout HTTP/1.1" 404 9259
+INFO 2025-08-13 12:28:46,085 basehttp "OPTIONS /api/login HTTP/1.1" 200 0
+INFO 2025-08-13 12:28:46,831 basehttp "POST /api/login HTTP/1.1" 200 309
+INFO 2025-08-13 12:28:46,937 basehttp "OPTIONS /api/api/dashboard/overview/ HTTP/1.1" 200 0
+INFO 2025-08-13 12:28:46,945 basehttp "OPTIONS /api/api/dashboard/sales-chart/?days=7 HTTP/1.1" 200 0
+INFO 2025-08-13 12:28:46,945 basehttp "OPTIONS /api/api/dashboard/low-stock/?threshold=10 HTTP/1.1" 200 0
+INFO 2025-08-13 12:28:46,945 basehttp "OPTIONS /api/api/dashboard/monthly-trend/ HTTP/1.1" 200 0
+INFO 2025-08-13 12:28:46,945 basehttp "OPTIONS /api/api/dashboard/payment-stats/?days=30 HTTP/1.1" 200 0
+INFO 2025-08-13 12:28:46,945 basehttp "OPTIONS /api/api/dashboard/recent-orders/?limit=5 HTTP/1.1" 200 0
+INFO 2025-08-13 12:28:46,946 basehttp "OPTIONS /api/api/dashboard/product-performance/?limit=5 HTTP/1.1" 200 0
+INFO 2025-08-13 12:28:47,068 basehttp "GET /api/api/dashboard/monthly-trend/ HTTP/1.1" 200 51
+INFO 2025-08-13 12:28:47,068 basehttp "GET /api/api/dashboard/low-stock/?threshold=10 HTTP/1.1" 200 2
+INFO 2025-08-13 12:28:47,070 basehttp "GET /api/api/dashboard/sales-chart/?days=7 HTTP/1.1" 200 125
+INFO 2025-08-13 12:28:47,070 basehttp "GET /api/api/dashboard/payment-stats/?days=30 HTTP/1.1" 200 171
+INFO 2025-08-13 12:28:47,073 basehttp "GET /api/api/dashboard/recent-orders/?limit=5 HTTP/1.1" 200 749
+INFO 2025-08-13 12:28:47,152 basehttp "GET /api/api/dashboard/product-performance/?limit=5 HTTP/1.1" 200 702
+INFO 2025-08-13 12:28:47,156 basehttp "GET /api/api/dashboard/overview/ HTTP/1.1" 200 319
+INFO 2025-08-13 12:29:54,790 basehttp "OPTIONS /api/vendors HTTP/1.1" 200 0
+INFO 2025-08-13 12:29:54,793 basehttp "OPTIONS /api/vendors/ HTTP/1.1" 200 0
+INFO 2025-08-13 12:29:54,862 basehttp "GET /api/vendors/ HTTP/1.1" 200 900
+INFO 2025-08-13 12:29:55,156 basehttp "OPTIONS /api/products HTTP/1.1" 200 0
+INFO 2025-08-13 12:29:55,157 basehttp "OPTIONS /api/products/add/features HTTP/1.1" 200 0
+INFO 2025-08-13 12:29:55,224 basehttp "GET /api/products/add/features HTTP/1.1" 200 1743
+INFO 2025-08-13 12:29:55,226 basehttp "GET /api/products HTTP/1.1" 200 1322
+INFO 2025-08-13 12:29:55,792 basehttp "OPTIONS /api/inventory HTTP/1.1" 200 0
+INFO 2025-08-13 12:29:55,863 basehttp "GET /api/inventory HTTP/1.1" 200 2441
+INFO 2025-08-13 12:43:16,868 basehttp "GET /api/inventory HTTP/1.1" 200 2441
+INFO 2025-08-13 12:43:17,312 basehttp "GET /api/products/add/features HTTP/1.1" 200 1743
+INFO 2025-08-13 12:43:17,316 basehttp "GET /api/products HTTP/1.1" 200 1322
+INFO 2025-08-13 12:43:26,210 basehttp "GET /api/products/add/features HTTP/1.1" 200 1743
+INFO 2025-08-13 12:43:26,217 basehttp "GET /api/products HTTP/1.1" 200 1322
+INFO 2025-08-13 12:43:28,725 basehttp "OPTIONS /api/products/2/inventory HTTP/1.1" 200 0
+INFO 2025-08-13 12:43:28,794 basehttp "GET /api/products/2/inventory HTTP/1.1" 200 1997
+INFO 2025-08-13 12:43:36,884 basehttp "OPTIONS /api/inventory/search/?sku=BOT-4424-S-306cc1-6493 HTTP/1.1" 200 0
+INFO 2025-08-13 12:43:36,948 basehttp "GET /api/inventory/search/?sku=BOT-4424-S-306cc1-6493 HTTP/1.1" 200 357
+INFO 2025-08-13 12:53:41,352 basehttp "GET /api/api/dashboard/product-performance/?limit=5 HTTP/1.1" 200 702
+INFO 2025-08-13 12:53:41,356 basehttp "GET /api/api/dashboard/sales-chart/?days=7 HTTP/1.1" 200 125
+INFO 2025-08-13 12:53:41,361 basehttp "GET /api/api/dashboard/low-stock/?threshold=10 HTTP/1.1" 200 2
+INFO 2025-08-13 12:53:41,363 basehttp "GET /api/api/dashboard/recent-orders/?limit=5 HTTP/1.1" 200 749
+INFO 2025-08-13 12:53:41,363 basehttp "GET /api/api/dashboard/payment-stats/?days=30 HTTP/1.1" 200 171
+INFO 2025-08-13 12:53:41,432 basehttp "GET /api/api/dashboard/overview/ HTTP/1.1" 200 319
+INFO 2025-08-13 12:53:41,525 basehttp "GET /api/api/dashboard/monthly-trend/ HTTP/1.1" 200 51
+INFO 2025-08-13 13:08:11,446 basehttp "GET /api/inventory/search/?sku=BOT-4424-S-306cc1-6493 HTTP/1.1" 200 357
+INFO 2025-08-13 13:08:24,081 basehttp "OPTIONS /api/transactions/create HTTP/1.1" 200 0
+INFO 2025-08-13 13:08:24,171 basehttp "POST /api/transactions/create HTTP/1.1" 201 605
+WARNING 2025-08-13 13:10:49,625 log Not Found: /api/inventory/search/
+WARNING 2025-08-13 13:10:49,626 basehttp "GET /api/inventory/search/?sku=BOT-4424-S-306cc1-6493 HTTP/1.1" 404 31
+INFO 2025-08-13 13:10:55,275 basehttp "GET /api/inventory HTTP/1.1" 200 2352
+WARNING 2025-08-13 13:10:58,696 log Not Found: /api/inventory/search/
+WARNING 2025-08-13 13:10:58,696 basehttp "GET /api/inventory/search/?sku=BOT-4424-S-306cc1-6493 HTTP/1.1" 404 31
+WARNING 2025-08-13 13:10:59,516 log Not Found: /api/inventory/search/
+WARNING 2025-08-13 13:10:59,517 basehttp "GET /api/inventory/search/?sku=BOT-4424-S-306cc1-6493 HTTP/1.1" 404 31
+INFO 2025-08-13 13:11:01,747 basehttp "OPTIONS /api/auth/verify HTTP/1.1" 200 0
+INFO 2025-08-13 13:11:01,831 basehttp "GET /api/auth/verify HTTP/1.1" 200 66
+INFO 2025-08-13 13:11:02,204 basehttp "GET /api/api/dashboard/sales-chart/?days=7 HTTP/1.1" 200 187
+INFO 2025-08-13 13:11:02,206 basehttp "GET /api/api/dashboard/product-performance/?limit=5 HTTP/1.1" 200 707
+INFO 2025-08-13 13:11:02,218 basehttp "GET /api/api/dashboard/low-stock/?threshold=10 HTTP/1.1" 200 2
+INFO 2025-08-13 13:11:02,219 basehttp "GET /api/api/dashboard/recent-orders/?limit=5 HTTP/1.1" 200 1001
+INFO 2025-08-13 13:11:02,282 basehttp "GET /api/api/dashboard/monthly-trend/ HTTP/1.1" 200 51
+INFO 2025-08-13 13:11:02,307 basehttp "GET /api/api/dashboard/overview/ HTTP/1.1" 200 319
+INFO 2025-08-13 13:11:02,323 basehttp "GET /api/api/dashboard/payment-stats/?days=30 HTTP/1.1" 200 254
+WARNING 2025-08-13 13:11:06,854 log Not Found: /api/inventory/search/
+WARNING 2025-08-13 13:11:06,854 basehttp "GET /api/inventory/search/?sku=BOT-4424-S-306cc1-6493 HTTP/1.1" 404 31
+WARNING 2025-08-13 13:11:07,587 log Not Found: /api/inventory/search/
+WARNING 2025-08-13 13:11:07,587 basehttp "GET /api/inventory/search/?sku=BOT-4424-S-306cc1-6493 HTTP/1.1" 404 31
+WARNING 2025-08-13 13:11:07,793 log Not Found: /api/inventory/search/
+WARNING 2025-08-13 13:11:07,794 basehttp "GET /api/inventory/search/?sku=BOT-4424-S-306cc1-6493 HTTP/1.1" 404 31
+WARNING 2025-08-13 13:11:07,984 log Not Found: /api/inventory/search/
+WARNING 2025-08-13 13:11:07,986 basehttp "GET /api/inventory/search/?sku=BOT-4424-S-306cc1-6493 HTTP/1.1" 404 31
+WARNING 2025-08-13 13:11:08,402 log Not Found: /api/inventory/search/
+WARNING 2025-08-13 13:11:08,402 basehttp "GET /api/inventory/search/?sku=BOT-4424-S-306cc1-6493 HTTP/1.1" 404 31
+WARNING 2025-08-13 13:11:08,561 log Not Found: /api/inventory/search/
+WARNING 2025-08-13 13:11:08,562 basehttp "GET /api/inventory/search/?sku=BOT-4424-S-306cc1-6493 HTTP/1.1" 404 31
+WARNING 2025-08-13 13:11:08,834 log Not Found: /api/inventory/search/
+WARNING 2025-08-13 13:11:08,834 basehttp "GET /api/inventory/search/?sku=BOT-4424-S-306cc1-6493 HTTP/1.1" 404 31
+INFO 2025-08-13 13:11:10,705 basehttp "GET /api/api/dashboard/sales-chart/?days=7 HTTP/1.1" 200 187
+INFO 2025-08-13 13:11:10,715 basehttp "GET /api/api/dashboard/product-performance/?limit=5 HTTP/1.1" 200 707
+INFO 2025-08-13 13:11:10,717 basehttp "GET /api/api/dashboard/payment-stats/?days=30 HTTP/1.1" 200 254
+INFO 2025-08-13 13:11:10,720 basehttp "GET /api/api/dashboard/low-stock/?threshold=10 HTTP/1.1" 200 2
+INFO 2025-08-13 13:11:10,723 basehttp "GET /api/api/dashboard/overview/ HTTP/1.1" 200 319
+INFO 2025-08-13 13:11:10,789 basehttp "GET /api/api/dashboard/monthly-trend/ HTTP/1.1" 200 51
+INFO 2025-08-13 13:11:10,803 basehttp "GET /api/api/dashboard/recent-orders/?limit=5 HTTP/1.1" 200 1001
+WARNING 2025-08-13 13:11:14,498 log Not Found: /api/inventory/search/
+WARNING 2025-08-13 13:11:14,499 basehttp "GET /api/inventory/search/?sku=BOT-4424-S-306cc1-6493 HTTP/1.1" 404 31
+INFO 2025-08-13 13:11:20,226 basehttp "GET /api/products/add/features HTTP/1.1" 200 1743
+INFO 2025-08-13 13:11:20,330 basehttp "GET /api/products HTTP/1.1" 200 1322
+INFO 2025-08-13 13:11:21,299 basehttp "GET /api/inventory HTTP/1.1" 200 2352
+INFO 2025-08-13 13:11:22,680 basehttp "GET /api/products HTTP/1.1" 200 1322
+INFO 2025-08-13 13:11:22,762 basehttp "GET /api/products/add/features HTTP/1.1" 200 1743
+INFO 2025-08-13 13:11:24,380 basehttp "OPTIONS /api/products/5/inventory HTTP/1.1" 200 0
+INFO 2025-08-13 13:11:24,458 basehttp "GET /api/products/5/inventory HTTP/1.1" 200 2671
+INFO 2025-08-13 13:11:32,040 basehttp "OPTIONS /api/inventory/search/?sku=TOP-9444-M-4cc4c4-1538 HTTP/1.1" 200 0
+INFO 2025-08-13 13:11:32,102 basehttp "GET /api/inventory/search/?sku=TOP-9444-M-4cc4c4-1538 HTTP/1.1" 200 364
+INFO 2025-08-13 13:14:59,535 basehttp "GET /api/inventory HTTP/1.1" 200 2352
+INFO 2025-08-13 13:15:01,709 basehttp "GET /api/products/add/features HTTP/1.1" 200 1743
+INFO 2025-08-13 13:15:01,714 basehttp "GET /api/products HTTP/1.1" 200 1322
+INFO 2025-08-13 13:16:42,393 basehttp "OPTIONS /api/products/5/ HTTP/1.1" 200 0
+INFO 2025-08-13 13:16:42,455 views Product update request ID: 5 data: {'vendor': 4, 'product_type': 'Top', 'fabric_type': 'Polyester', 'color_code': '#4cc4c4', 'base_price': '654.00', 'markup_price': '232.00', 'discount_percentage': 10, 'mrp': 886}
+INFO 2025-08-13 13:16:42,470 basehttp "PUT /api/products/5/ HTTP/1.1" 200 262
+INFO 2025-08-13 13:16:42,639 basehttp "GET /api/products HTTP/1.1" 200 1323
+INFO 2025-08-13 13:16:59,464 basehttp "OPTIONS /api/products/4/inventory HTTP/1.1" 200 0
+INFO 2025-08-13 13:16:59,545 basehttp "GET /api/products/4/inventory HTTP/1.1" 200 2670
+INFO 2025-08-13 13:17:01,157 basehttp "GET /api/products/add/features HTTP/1.1" 200 1743
+INFO 2025-08-13 13:17:01,161 basehttp "GET /api/products HTTP/1.1" 200 1323
+INFO 2025-08-13 13:17:13,942 basehttp "GET /api/inventory/search/?sku=TOP-9444-M-4cc4c4-1538 HTTP/1.1" 200 365
+INFO 2025-08-13 13:21:07,246 basehttp "GET /api/inventory HTTP/1.1" 200 2352
+INFO 2025-08-13 13:21:11,065 basehttp "GET /api/inventory/search/?sku=TOP-9444-M-4cc4c4-1538 HTTP/1.1" 200 365
+INFO 2025-08-13 13:22:29,458 basehttp "POST /api/transactions/create HTTP/1.1" 201 596
+INFO 2025-08-15 15:57:10,528 autoreload Watching for file changes with StatReloader
+INFO 2025-08-15 15:57:36,210 basehttp "OPTIONS /api/auth/verify HTTP/1.1" 200 0
+WARNING 2025-08-15 15:57:36,262 log Unauthorized: /api/auth/verify
+WARNING 2025-08-15 15:57:36,262 basehttp "GET /api/auth/verify HTTP/1.1" 401 172
+INFO 2025-08-15 15:57:36,289 basehttp "OPTIONS /api/logout HTTP/1.1" 200 0
+WARNING 2025-08-15 15:57:36,330 log Not Found: /api/logout
+WARNING 2025-08-15 15:57:36,330 basehttp "POST /api/logout HTTP/1.1" 404 9259
+INFO 2025-08-15 15:57:39,773 basehttp "OPTIONS /api/login HTTP/1.1" 200 0
+INFO 2025-08-15 15:57:40,520 basehttp "POST /api/login HTTP/1.1" 200 309
+INFO 2025-08-15 15:57:40,607 basehttp "OPTIONS /api/api/dashboard/overview/ HTTP/1.1" 200 0
+INFO 2025-08-15 15:57:40,615 basehttp "OPTIONS /api/api/dashboard/monthly-trend/ HTTP/1.1" 200 0
+INFO 2025-08-15 15:57:40,616 basehttp "OPTIONS /api/api/dashboard/product-performance/?limit=5 HTTP/1.1" 200 0
+INFO 2025-08-15 15:57:40,616 basehttp "OPTIONS /api/api/dashboard/payment-stats/?days=30 HTTP/1.1" 200 0
+INFO 2025-08-15 15:57:40,616 basehttp "OPTIONS /api/api/dashboard/sales-chart/?days=7 HTTP/1.1" 200 0
+INFO 2025-08-15 15:57:40,616 basehttp "OPTIONS /api/api/dashboard/low-stock/?threshold=10 HTTP/1.1" 200 0
+INFO 2025-08-15 15:57:40,617 basehttp "OPTIONS /api/api/dashboard/recent-orders/?limit=5 HTTP/1.1" 200 0
+INFO 2025-08-15 15:57:40,753 basehttp "GET /api/api/dashboard/low-stock/?threshold=10 HTTP/1.1" 200 2
+INFO 2025-08-15 15:57:40,767 basehttp "GET /api/api/dashboard/recent-orders/?limit=5 HTTP/1.1" 200 1248
+INFO 2025-08-15 15:57:40,770 basehttp "GET /api/api/dashboard/payment-stats/?days=30 HTTP/1.1" 200 257
+INFO 2025-08-15 15:57:40,773 basehttp "GET /api/api/dashboard/monthly-trend/ HTTP/1.1" 200 51
+INFO 2025-08-15 15:57:40,778 basehttp "GET /api/api/dashboard/sales-chart/?days=7 HTTP/1.1" 200 187
+INFO 2025-08-15 15:57:40,797 basehttp "GET /api/api/dashboard/overview/ HTTP/1.1" 200 318
+INFO 2025-08-15 15:57:40,844 basehttp "GET /api/api/dashboard/product-performance/?limit=5 HTTP/1.1" 200 707
+INFO 2025-08-15 15:59:14,807 basehttp "OPTIONS /api/vendors HTTP/1.1" 200 0
+INFO 2025-08-15 15:59:14,810 basehttp "OPTIONS /api/vendors/ HTTP/1.1" 200 0
+INFO 2025-08-15 15:59:14,870 basehttp "GET /api/vendors/ HTTP/1.1" 200 900
+INFO 2025-08-17 20:19:54,814 autoreload Watching for file changes with StatReloader
+INFO 2025-08-17 20:20:44,868 autoreload Watching for file changes with StatReloader
+INFO 2025-08-17 20:22:12,302 autoreload E:\Gigs\Magavi\Maguva-Project\Manguva\Manguva\settings.py changed, reloading.
+INFO 2025-08-17 20:22:13,004 autoreload Watching for file changes with StatReloader
+INFO 2025-08-17 20:22:19,236 autoreload Watching for file changes with StatReloader
+INFO 2025-08-17 20:23:57,806 basehttp "OPTIONS /api/auth/verify HTTP/1.1" 200 0
+WARNING 2025-08-17 20:23:57,844 log Unauthorized: /api/auth/verify
+WARNING 2025-08-17 20:23:57,845 basehttp "GET /api/auth/verify HTTP/1.1" 401 172
+WARNING 2025-08-17 20:23:58,191 log Unauthorized: /api/auth/verify
+WARNING 2025-08-17 20:23:58,191 basehttp "GET /api/auth/verify HTTP/1.1" 401 58
+INFO 2025-08-17 20:24:08,827 basehttp "OPTIONS /api/login HTTP/1.1" 200 0
+INFO 2025-08-17 20:24:09,474 basehttp "POST /api/login HTTP/1.1" 200 309
+INFO 2025-08-17 20:24:09,570 basehttp "OPTIONS /api/dashboard/analytics/?days=30 HTTP/1.1" 200 0
+ERROR 2025-08-17 20:24:09,700 views Error getting recent orders: column admin_app_orderitem.batch_id does not exist
+LINE 1: ...nventory_id", "admin_app_orderitem"."product_id", "admin_app...
+                                                             ^
+
+ERROR 2025-08-17 20:24:09,700 log Internal Server Error: /api/dashboard/analytics/
+ERROR 2025-08-17 20:24:09,701 basehttp "GET /api/dashboard/analytics/?days=30 HTTP/1.1" 500 33
+ERROR 2025-08-17 20:24:14,428 views Error getting recent orders: column admin_app_orderitem.batch_id does not exist
+LINE 1: ...nventory_id", "admin_app_orderitem"."product_id", "admin_app...
+                                                             ^
+
+ERROR 2025-08-17 20:24:14,428 log Internal Server Error: /api/dashboard/analytics/
+ERROR 2025-08-17 20:24:14,429 basehttp "GET /api/dashboard/analytics/?days=30 HTTP/1.1" 500 33
+INFO 2025-08-17 20:24:25,336 basehttp "OPTIONS /api/manguva/report/?date=2025-08-17 HTTP/1.1" 200 0
+ERROR 2025-08-17 20:24:25,409 log Internal Server Error: /api/manguva/report/
+ERROR 2025-08-17 20:24:25,410 basehttp "GET /api/manguva/report/?date=2025-08-17 HTTP/1.1" 500 184
+INFO 2025-08-17 20:24:26,427 basehttp "OPTIONS /api/tailor/orders/ HTTP/1.1" 200 0
+ERROR 2025-08-17 20:24:26,483 views Error fetching tailor orders: relation "admin_app_tailororder" does not exist
+LINE 1: ...ed_at", "admin_app_tailororder"."updated_at" FROM "admin_app...
+                                                             ^
+
+ERROR 2025-08-17 20:24:26,483 log Internal Server Error: /api/tailor/orders/
+ERROR 2025-08-17 20:24:26,484 basehttp "GET /api/tailor/orders/ HTTP/1.1" 500 34
+INFO 2025-08-17 20:24:27,146 basehttp "OPTIONS /api/transactions/list HTTP/1.1" 200 0
+INFO 2025-08-17 20:24:27,306 views User admin@admin.com fetched order list.
+ERROR 2025-08-17 20:24:27,511 log Internal Server Error: /api/transactions/list
+Traceback (most recent call last):
+  File "E:\Gigs\Magavi\Maguva-Project\.venv\lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+psycopg2.errors.UndefinedColumn: column admin_app_orderitem.batch_id does not exist
+LINE 1: ...nventory_id", "admin_app_orderitem"."product_id", "admin_app...
+                                                             ^
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "E:\Gigs\Magavi\Maguva-Project\.venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\Gigs\Magavi\Maguva-Project\.venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\Gigs\Magavi\Maguva-Project\.venv\lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "E:\Gigs\Magavi\Maguva-Project\.venv\lib\site-packages\django\views\generic\base.py", line 105, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "E:\Gigs\Magavi\Maguva-Project\.venv\lib\site-packages\rest_framework\views.py", line 515, in dispatch
+    response = self.handle_exception(exc)
+  File "E:\Gigs\Magavi\Maguva-Project\.venv\lib\site-packages\rest_framework\views.py", line 475, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "E:\Gigs\Magavi\Maguva-Project\.venv\lib\site-packages\rest_framework\views.py", line 486, in raise_uncaught_exception
+    raise exc
+  File "E:\Gigs\Magavi\Maguva-Project\.venv\lib\site-packages\rest_framework\views.py", line 512, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "E:\Gigs\Magavi\Maguva-Project\.venv\lib\site-packages\rest_framework\generics.py", line 203, in get
+    return self.list(request, *args, **kwargs)
+  File "E:\Gigs\Magavi\Maguva-Project\Manguva\admin_app\views.py", line 545, in list
+    return super().list(request, *args, **kwargs)
+  File "E:\Gigs\Magavi\Maguva-Project\.venv\lib\site-packages\rest_framework\mixins.py", line 46, in list
+    return Response(serializer.data)
+  File "E:\Gigs\Magavi\Maguva-Project\.venv\lib\site-packages\rest_framework\serializers.py", line 797, in data
+    ret = super().data
+  File "E:\Gigs\Magavi\Maguva-Project\.venv\lib\site-packages\rest_framework\serializers.py", line 251, in data
+    self._data = self.to_representation(self.instance)
+  File "E:\Gigs\Magavi\Maguva-Project\.venv\lib\site-packages\rest_framework\serializers.py", line 715, in to_representation
+    return [
+  File "E:\Gigs\Magavi\Maguva-Project\.venv\lib\site-packages\rest_framework\serializers.py", line 716, in <listcomp>
+    self.child.to_representation(item) for item in iterable
+  File "E:\Gigs\Magavi\Maguva-Project\.venv\lib\site-packages\rest_framework\serializers.py", line 540, in to_representation
+    ret[field.field_name] = field.to_representation(attribute)
+  File "E:\Gigs\Magavi\Maguva-Project\.venv\lib\site-packages\rest_framework\serializers.py", line 715, in to_representation
+    return [
+  File "E:\Gigs\Magavi\Maguva-Project\.venv\lib\site-packages\django\db\models\query.py", line 384, in __iter__
+    self._fetch_all()
+  File "E:\Gigs\Magavi\Maguva-Project\.venv\lib\site-packages\django\db\models\query.py", line 1949, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "E:\Gigs\Magavi\Maguva-Project\.venv\lib\site-packages\django\db\models\query.py", line 91, in __iter__
+    results = compiler.execute_sql(
+  File "E:\Gigs\Magavi\Maguva-Project\.venv\lib\site-packages\django\db\models\sql\compiler.py", line 1623, in execute_sql
+    cursor.execute(sql, params)
+  File "E:\Gigs\Magavi\Maguva-Project\.venv\lib\site-packages\django\db\backends\utils.py", line 122, in execute
+    return super().execute(sql, params)
+  File "E:\Gigs\Magavi\Maguva-Project\.venv\lib\site-packages\django\db\backends\utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+  File "E:\Gigs\Magavi\Maguva-Project\.venv\lib\site-packages\django\db\backends\utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "E:\Gigs\Magavi\Maguva-Project\.venv\lib\site-packages\django\db\backends\utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+  File "E:\Gigs\Magavi\Maguva-Project\.venv\lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "E:\Gigs\Magavi\Maguva-Project\.venv\lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+django.db.utils.ProgrammingError: column admin_app_orderitem.batch_id does not exist
+LINE 1: ...nventory_id", "admin_app_orderitem"."product_id", "admin_app...
+                                                             ^
+
+ERROR 2025-08-17 20:24:27,516 basehttp "GET /api/transactions/list HTTP/1.1" 500 214142
+INFO 2025-08-17 20:24:31,993 basehttp "OPTIONS /api/products HTTP/1.1" 200 0
+INFO 2025-08-17 20:24:31,996 basehttp "OPTIONS /api/products/add/features HTTP/1.1" 200 0
+INFO 2025-08-17 20:24:32,062 basehttp "GET /api/products/add/features HTTP/1.1" 200 1743
+ERROR 2025-08-17 20:24:32,112 log Internal Server Error: /api/products
+Traceback (most recent call last):
+  File "E:\Gigs\Magavi\Maguva-Project\.venv\lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+psycopg2.errors.UndefinedColumn: column admin_app_product.markup_type does not exist
+LINE 1: ..."base_price", "admin_app_product"."markup_price", "admin_app...
+                                                             ^
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "E:\Gigs\Magavi\Maguva-Project\.venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\Gigs\Magavi\Maguva-Project\.venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\Gigs\Magavi\Maguva-Project\.venv\lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "E:\Gigs\Magavi\Maguva-Project\.venv\lib\site-packages\django\views\generic\base.py", line 105, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "E:\Gigs\Magavi\Maguva-Project\.venv\lib\site-packages\rest_framework\views.py", line 515, in dispatch
+    response = self.handle_exception(exc)
+  File "E:\Gigs\Magavi\Maguva-Project\.venv\lib\site-packages\rest_framework\views.py", line 475, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "E:\Gigs\Magavi\Maguva-Project\.venv\lib\site-packages\rest_framework\views.py", line 486, in raise_uncaught_exception
+    raise exc
+  File "E:\Gigs\Magavi\Maguva-Project\.venv\lib\site-packages\rest_framework\views.py", line 512, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "E:\Gigs\Magavi\Maguva-Project\.venv\lib\site-packages\rest_framework\generics.py", line 203, in get
+    return self.list(request, *args, **kwargs)
+  File "E:\Gigs\Magavi\Maguva-Project\.venv\lib\site-packages\rest_framework\mixins.py", line 46, in list
+    return Response(serializer.data)
+  File "E:\Gigs\Magavi\Maguva-Project\.venv\lib\site-packages\rest_framework\serializers.py", line 797, in data
+    ret = super().data
+  File "E:\Gigs\Magavi\Maguva-Project\.venv\lib\site-packages\rest_framework\serializers.py", line 251, in data
+    self._data = self.to_representation(self.instance)
+  File "E:\Gigs\Magavi\Maguva-Project\.venv\lib\site-packages\rest_framework\serializers.py", line 715, in to_representation
+    return [
+  File "E:\Gigs\Magavi\Maguva-Project\.venv\lib\site-packages\django\db\models\query.py", line 384, in __iter__
+    self._fetch_all()
+  File "E:\Gigs\Magavi\Maguva-Project\.venv\lib\site-packages\django\db\models\query.py", line 1949, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "E:\Gigs\Magavi\Maguva-Project\.venv\lib\site-packages\django\db\models\query.py", line 91, in __iter__
+    results = compiler.execute_sql(
+  File "E:\Gigs\Magavi\Maguva-Project\.venv\lib\site-packages\django\db\models\sql\compiler.py", line 1623, in execute_sql
+    cursor.execute(sql, params)
+  File "E:\Gigs\Magavi\Maguva-Project\.venv\lib\site-packages\django\db\backends\utils.py", line 122, in execute
+    return super().execute(sql, params)
+  File "E:\Gigs\Magavi\Maguva-Project\.venv\lib\site-packages\django\db\backends\utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+  File "E:\Gigs\Magavi\Maguva-Project\.venv\lib\site-packages\django\db\backends\utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "E:\Gigs\Magavi\Maguva-Project\.venv\lib\site-packages\django\db\backends\utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+  File "E:\Gigs\Magavi\Maguva-Project\.venv\lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "E:\Gigs\Magavi\Maguva-Project\.venv\lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+django.db.utils.ProgrammingError: column admin_app_product.markup_type does not exist
+LINE 1: ..."base_price", "admin_app_product"."markup_price", "admin_app...
+                                                             ^
+
+ERROR 2025-08-17 20:24:32,115 basehttp "GET /api/products HTTP/1.1" 500 182318
+INFO 2025-08-17 20:24:32,877 basehttp "OPTIONS /api/inventory HTTP/1.1" 200 0
+INFO 2025-08-17 20:24:33,043 basehttp "GET /api/inventory HTTP/1.1" 200 2352
+INFO 2025-08-17 20:24:34,701 basehttp "GET /api/products/add/features HTTP/1.1" 200 1743
+ERROR 2025-08-17 20:24:34,748 log Internal Server Error: /api/products
+Traceback (most recent call last):
+  File "E:\Gigs\Magavi\Maguva-Project\.venv\lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+psycopg2.errors.UndefinedColumn: column admin_app_product.markup_type does not exist
+LINE 1: ..."base_price", "admin_app_product"."markup_price", "admin_app...
+                                                             ^
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "E:\Gigs\Magavi\Maguva-Project\.venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\Gigs\Magavi\Maguva-Project\.venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\Gigs\Magavi\Maguva-Project\.venv\lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "E:\Gigs\Magavi\Maguva-Project\.venv\lib\site-packages\django\views\generic\base.py", line 105, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "E:\Gigs\Magavi\Maguva-Project\.venv\lib\site-packages\rest_framework\views.py", line 515, in dispatch
+    response = self.handle_exception(exc)
+  File "E:\Gigs\Magavi\Maguva-Project\.venv\lib\site-packages\rest_framework\views.py", line 475, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "E:\Gigs\Magavi\Maguva-Project\.venv\lib\site-packages\rest_framework\views.py", line 486, in raise_uncaught_exception
+    raise exc
+  File "E:\Gigs\Magavi\Maguva-Project\.venv\lib\site-packages\rest_framework\views.py", line 512, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "E:\Gigs\Magavi\Maguva-Project\.venv\lib\site-packages\rest_framework\generics.py", line 203, in get
+    return self.list(request, *args, **kwargs)
+  File "E:\Gigs\Magavi\Maguva-Project\.venv\lib\site-packages\rest_framework\mixins.py", line 46, in list
+    return Response(serializer.data)
+  File "E:\Gigs\Magavi\Maguva-Project\.venv\lib\site-packages\rest_framework\serializers.py", line 797, in data
+    ret = super().data
+  File "E:\Gigs\Magavi\Maguva-Project\.venv\lib\site-packages\rest_framework\serializers.py", line 251, in data
+    self._data = self.to_representation(self.instance)
+  File "E:\Gigs\Magavi\Maguva-Project\.venv\lib\site-packages\rest_framework\serializers.py", line 715, in to_representation
+    return [
+  File "E:\Gigs\Magavi\Maguva-Project\.venv\lib\site-packages\django\db\models\query.py", line 384, in __iter__
+    self._fetch_all()
+  File "E:\Gigs\Magavi\Maguva-Project\.venv\lib\site-packages\django\db\models\query.py", line 1949, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "E:\Gigs\Magavi\Maguva-Project\.venv\lib\site-packages\django\db\models\query.py", line 91, in __iter__
+    results = compiler.execute_sql(
+  File "E:\Gigs\Magavi\Maguva-Project\.venv\lib\site-packages\django\db\models\sql\compiler.py", line 1623, in execute_sql
+    cursor.execute(sql, params)
+  File "E:\Gigs\Magavi\Maguva-Project\.venv\lib\site-packages\django\db\backends\utils.py", line 122, in execute
+    return super().execute(sql, params)
+  File "E:\Gigs\Magavi\Maguva-Project\.venv\lib\site-packages\django\db\backends\utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+  File "E:\Gigs\Magavi\Maguva-Project\.venv\lib\site-packages\django\db\backends\utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "E:\Gigs\Magavi\Maguva-Project\.venv\lib\site-packages\django\db\backends\utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+  File "E:\Gigs\Magavi\Maguva-Project\.venv\lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "E:\Gigs\Magavi\Maguva-Project\.venv\lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+django.db.utils.ProgrammingError: column admin_app_product.markup_type does not exist
+LINE 1: ..."base_price", "admin_app_product"."markup_price", "admin_app...
+                                                             ^
+
+ERROR 2025-08-17 20:24:34,751 basehttp "GET /api/products HTTP/1.1" 500 182318
+INFO 2025-08-17 20:24:35,954 basehttp "OPTIONS /api/vendors HTTP/1.1" 200 0
+INFO 2025-08-17 20:24:35,957 basehttp "OPTIONS /api/vendors/ HTTP/1.1" 200 0
+INFO 2025-08-17 20:24:36,007 basehttp "GET /api/vendors/ HTTP/1.1" 200 900
+ERROR 2025-08-17 20:24:45,710 views Error getting recent orders: column admin_app_orderitem.batch_id does not exist
+LINE 1: ...nventory_id", "admin_app_orderitem"."product_id", "admin_app...
+                                                             ^
+
+ERROR 2025-08-17 20:24:45,711 log Internal Server Error: /api/dashboard/analytics/
+ERROR 2025-08-17 20:24:45,711 basehttp "GET /api/dashboard/analytics/?days=30 HTTP/1.1" 500 33
+INFO 2025-08-17 20:43:23,029 autoreload Watching for file changes with StatReloader
+INFO 2025-08-17 20:43:34,464 basehttp "GET /api/auth/verify HTTP/1.1" 200 67
+INFO 2025-08-17 20:43:34,576 basehttp "GET /api/dashboard/analytics/?days=30 HTTP/1.1" 200 470
+INFO 2025-08-17 20:43:45,885 basehttp "GET /api/vendors/ HTTP/1.1" 200 2
+INFO 2025-08-17 20:43:53,643 basehttp "OPTIONS /api/vendors/add HTTP/1.1" 200 0
+INFO 2025-08-17 20:43:53,699 views Vendor creation request by user admin@admin.com
+INFO 2025-08-17 20:43:53,753 basehttp "POST /api/vendors/add HTTP/1.1" 201 227
+INFO 2025-08-17 20:43:53,833 basehttp "GET /api/vendors/ HTTP/1.1" 200 229
+INFO 2025-08-17 20:44:07,945 views Vendor creation request by user admin@admin.com
+INFO 2025-08-17 20:44:07,948 basehttp "POST /api/vendors/add HTTP/1.1" 201 231
+INFO 2025-08-17 20:44:08,145 basehttp "GET /api/vendors/ HTTP/1.1" 200 461
+INFO 2025-08-17 20:44:17,901 views Vendor creation request by user admin@admin.com
+INFO 2025-08-17 20:44:17,909 basehttp "POST /api/vendors/add HTTP/1.1" 201 223
+INFO 2025-08-17 20:44:18,016 basehttp "GET /api/vendors/ HTTP/1.1" 200 685
+INFO 2025-08-17 20:44:20,594 basehttp "GET /api/products HTTP/1.1" 200 2
+INFO 2025-08-17 20:44:20,596 basehttp "GET /api/products/add/features HTTP/1.1" 200 1528
+INFO 2025-08-17 20:44:22,722 basehttp "GET /api/vendors/ HTTP/1.1" 200 685
+INFO 2025-08-17 20:44:27,021 basehttp "OPTIONS /api/vendors/1/analytics/ HTTP/1.1" 200 0
+INFO 2025-08-17 20:44:27,082 basehttp "GET /api/vendors/1/analytics/ HTTP/1.1" 200 183
+INFO 2025-08-17 20:44:33,934 basehttp "GET /api/vendors/1/analytics/ HTTP/1.1" 200 183
+INFO 2025-08-17 20:44:36,466 basehttp "GET /api/products HTTP/1.1" 200 2
+INFO 2025-08-17 20:44:36,471 basehttp "GET /api/products/add/features HTTP/1.1" 200 1528
+INFO 2025-08-17 20:45:16,972 basehttp "OPTIONS /api/products/add HTTP/1.1" 200 0
+INFO 2025-08-17 20:45:17,122 views Product creation request: {'vendor': 1, 'product_type': 'Kurti', 'fabric_type': 'Georgette', 'color_code': '#0255ca', 'base_price': 764, 'markup_type': 'percent', 'markup_price': 764, 'discount_percentage': 10, 'mrp': 1528}
+INFO 2025-08-17 20:45:17,136 basehttp "POST /api/products/add HTTP/1.1" 201 288
+INFO 2025-08-17 20:45:17,195 basehttp "GET /api/products HTTP/1.1" 200 290
+INFO 2025-08-17 20:45:21,172 basehttp "OPTIONS /api/products/1/inventory HTTP/1.1" 200 0
+INFO 2025-08-17 20:45:21,173 basehttp "OPTIONS /api/stock-batches/?product=1 HTTP/1.1" 200 0
+INFO 2025-08-17 20:45:21,241 basehttp "GET /api/stock-batches/?product=1 HTTP/1.1" 200 2
+INFO 2025-08-17 20:45:21,252 basehttp "GET /api/products/1/inventory HTTP/1.1" 200 280
+INFO 2025-08-17 20:45:23,381 basehttp "GET /api/products HTTP/1.1" 200 290
+INFO 2025-08-17 20:45:23,381 basehttp "GET /api/products/add/features HTTP/1.1" 200 1528
+INFO 2025-08-17 20:46:34,162 basehttp "OPTIONS /api/products/1/ HTTP/1.1" 200 0
+INFO 2025-08-17 20:46:34,222 views Product update request ID: 1 data: {'vendor': 1, 'product_type': 'Kurti', 'fabric_type': 'Georgette', 'color_code': '#0255ca', 'base_price': '764.00', 'markup_type': 'percent', 'markup_price': 764, 'discount_percentage': '10.00', 'mrp': 1528}
+INFO 2025-08-17 20:46:34,233 basehttp "PUT /api/products/1/ HTTP/1.1" 200 288
+INFO 2025-08-17 20:46:34,299 basehttp "GET /api/products HTTP/1.1" 200 290
+INFO 2025-08-17 20:46:39,881 basehttp "GET /api/auth/verify HTTP/1.1" 200 67
+INFO 2025-08-17 20:46:39,888 basehttp "GET /api/products HTTP/1.1" 200 290
+INFO 2025-08-17 20:46:39,990 basehttp "GET /api/products/add/features HTTP/1.1" 200 1528
+INFO 2025-08-17 20:46:53,068 views Product update request ID: 1 data: {'vendor': 1, 'product_type': 'Kurti', 'fabric_type': 'Georgette', 'color_code': '#0255ca', 'base_price': '764.00', 'markup_type': 'percent', 'markup_price': 764, 'discount_percentage': '10.00', 'mrp': 1528}
+INFO 2025-08-17 20:46:53,078 basehttp "PUT /api/products/1/ HTTP/1.1" 200 288
+INFO 2025-08-17 20:46:53,134 basehttp "GET /api/products HTTP/1.1" 200 290
+INFO 2025-08-17 20:47:12,479 basehttp "OPTIONS /api/products/1 HTTP/1.1" 200 0
+INFO 2025-08-17 20:47:12,532 views Product delete request ID: 1
+INFO 2025-08-17 20:47:12,544 basehttp "DELETE /api/products/1 HTTP/1.1" 204 0
+INFO 2025-08-17 20:47:12,705 basehttp "GET /api/products HTTP/1.1" 200 2
+INFO 2025-08-17 20:48:01,701 views Product creation request: {'vendor': 1, 'product_type': 'Saree', 'fabric_type': 'Silk', 'color_code': '#2a5b9e', 'base_price': 657, 'markup_type': 'fixed', 'markup_price': 100, 'discount_percentage': 0, 'mrp': 757}
+INFO 2025-08-17 20:48:01,707 basehttp "POST /api/products/add HTTP/1.1" 201 279
+INFO 2025-08-17 20:48:01,771 basehttp "GET /api/products HTTP/1.1" 200 281
+INFO 2025-08-17 20:48:07,203 basehttp "OPTIONS /api/stock-batches/?product=2 HTTP/1.1" 200 0
+INFO 2025-08-17 20:48:07,203 basehttp "OPTIONS /api/products/2/inventory HTTP/1.1" 200 0
+INFO 2025-08-17 20:48:07,264 basehttp "GET /api/stock-batches/?product=2 HTTP/1.1" 200 2
+INFO 2025-08-17 20:48:07,273 basehttp "GET /api/products/2/inventory HTTP/1.1" 200 273
+INFO 2025-08-17 20:48:09,061 basehttp "GET /api/products/add/features HTTP/1.1" 200 1528
+INFO 2025-08-17 20:48:09,062 basehttp "GET /api/products HTTP/1.1" 200 281
+INFO 2025-08-17 20:48:10,372 basehttp "GET /api/products/2/inventory HTTP/1.1" 200 273
+INFO 2025-08-17 20:48:10,478 basehttp "GET /api/stock-batches/?product=2 HTTP/1.1" 200 2
+INFO 2025-08-17 20:48:12,382 basehttp "GET /api/products HTTP/1.1" 200 281
+INFO 2025-08-17 20:48:12,382 basehttp "GET /api/products/add/features HTTP/1.1" 200 1528
+INFO 2025-08-17 20:48:13,603 basehttp "GET /api/stock-batches/?product=2 HTTP/1.1" 200 2
+INFO 2025-08-17 20:48:13,604 basehttp "GET /api/products/2/inventory HTTP/1.1" 200 273
+INFO 2025-08-17 20:48:18,987 basehttp "GET /api/products HTTP/1.1" 200 281
+INFO 2025-08-17 20:48:19,093 basehttp "GET /api/products/add/features HTTP/1.1" 200 1528
+INFO 2025-08-17 20:48:25,766 basehttp "GET /api/inventory HTTP/1.1" 200 2
+INFO 2025-08-17 20:48:27,407 basehttp "OPTIONS /api/inventory/products HTTP/1.1" 200 0
+INFO 2025-08-17 20:48:27,476 basehttp "GET /api/inventory/products HTTP/1.1" 200 61
+INFO 2025-08-17 20:48:42,420 basehttp "OPTIONS /api/products/add/inventory HTTP/1.1" 200 0
+ERROR 2025-08-17 20:48:43,336 views Unexpected error: duplicate key value violates unique constraint "admin_app_inventory_sku_key"
+DETAIL:  Key (sku)=(SAR-1834--2a5b9e-9639) already exists.
+
+WARNING 2025-08-17 20:48:43,338 log Bad Request: /api/products/add/inventory
+WARNING 2025-08-17 20:48:43,338 basehttp "POST /api/products/add/inventory HTTP/1.1" 400 152
+INFO 2025-08-17 20:48:46,661 basehttp "GET /api/products/add/features HTTP/1.1" 200 1528
+INFO 2025-08-17 20:48:46,670 basehttp "GET /api/products HTTP/1.1" 200 281
+INFO 2025-08-17 20:48:47,742 basehttp "GET /api/products/2/inventory HTTP/1.1" 200 34964
+INFO 2025-08-17 20:48:47,844 basehttp "GET /api/stock-batches/?product=2 HTTP/1.1" 200 27
+INFO 2025-08-17 20:49:10,270 basehttp "OPTIONS /api/products/delete/2/inventory HTTP/1.1" 200 0
+INFO 2025-08-17 20:49:10,334 basehttp "DELETE /api/products/delete/2/inventory HTTP/1.1" 204 44
+INFO 2025-08-17 20:49:11,837 basehttp "OPTIONS /api/products/delete/3/inventory HTTP/1.1" 200 0
+INFO 2025-08-17 20:49:11,917 basehttp "DELETE /api/products/delete/3/inventory HTTP/1.1" 204 44
+INFO 2025-08-17 20:49:14,507 basehttp "GET /api/vendors/ HTTP/1.1" 200 685
+INFO 2025-08-17 20:49:16,612 basehttp "GET /api/products/add/features HTTP/1.1" 200 1528
+INFO 2025-08-17 20:49:16,708 basehttp "GET /api/products HTTP/1.1" 200 281
+INFO 2025-08-17 20:49:20,336 basehttp "GET /api/auth/verify HTTP/1.1" 200 67
+INFO 2025-08-17 20:49:20,354 basehttp "GET /api/products/add/features HTTP/1.1" 200 1528
+INFO 2025-08-17 20:49:20,354 basehttp "GET /api/products HTTP/1.1" 200 281
+INFO 2025-08-17 20:49:47,834 basehttp "GET /api/inventory HTTP/1.1" 200 590
+INFO 2025-08-17 20:49:59,334 basehttp "GET /api/inventory HTTP/1.1" 200 590
+INFO 2025-08-17 20:50:08,838 basehttp "GET /api/vendors/ HTTP/1.1" 200 685
+INFO 2025-08-17 20:50:09,473 basehttp "GET /api/products HTTP/1.1" 200 281
+INFO 2025-08-17 20:50:09,582 basehttp "GET /api/products/add/features HTTP/1.1" 200 1528
+INFO 2025-08-17 20:50:44,651 views Product creation request: {'vendor': 1, 'product_type': 'Saree', 'fabric_type': 'Silk', 'color_code': '#19509c', 'base_price': 456, 'markup_type': 'fixed', 'markup_price': 345768970878, 'discount_percentage': 0, 'mrp': 345768971334}
+ERROR 2025-08-17 20:50:44,655 views Error creating product: {'markup_price': [ErrorDetail(string='Ensure that there are no more than 10 digits in total.', code='max_digits')], 'mrp': [ErrorDetail(string='Ensure that there are no more than 10 digits in total.', code='max_digits')]}
+WARNING 2025-08-17 20:50:44,656 log Bad Request: /api/products/add
+WARNING 2025-08-17 20:50:44,656 basehttp "POST /api/products/add HTTP/1.1" 400 36
+INFO 2025-08-17 20:50:47,732 views Product creation request: {'vendor': 1, 'product_type': 'Saree', 'fabric_type': 'Silk', 'color_code': '#19509c', 'base_price': 456, 'markup_type': 'fixed', 'markup_price': 345768970878, 'discount_percentage': 0, 'mrp': 345768971334}
+ERROR 2025-08-17 20:50:47,736 views Error creating product: {'markup_price': [ErrorDetail(string='Ensure that there are no more than 10 digits in total.', code='max_digits')], 'mrp': [ErrorDetail(string='Ensure that there are no more than 10 digits in total.', code='max_digits')]}
+WARNING 2025-08-17 20:50:47,737 log Bad Request: /api/products/add
+WARNING 2025-08-17 20:50:47,737 basehttp "POST /api/products/add HTTP/1.1" 400 36
+INFO 2025-08-17 20:50:54,200 views Product creation request: {'vendor': 1, 'product_type': 'Saree', 'fabric_type': 'Silk', 'color_code': '#19509c', 'base_price': 456, 'markup_type': 'fixed', 'markup_price': 345768970878, 'discount_percentage': 0, 'mrp': 345768971334}
+ERROR 2025-08-17 20:50:54,203 views Error creating product: {'markup_price': [ErrorDetail(string='Ensure that there are no more than 10 digits in total.', code='max_digits')], 'mrp': [ErrorDetail(string='Ensure that there are no more than 10 digits in total.', code='max_digits')]}
+WARNING 2025-08-17 20:50:54,203 log Bad Request: /api/products/add
+WARNING 2025-08-17 20:50:54,204 basehttp "POST /api/products/add HTTP/1.1" 400 36
+INFO 2025-08-17 20:51:02,833 views Product creation request: {'vendor': 1, 'product_type': 'Saree', 'fabric_type': 'Silk', 'color_code': '#19509c', 'base_price': 456, 'markup_type': 'fixed', 'markup_price': 34576, 'discount_percentage': 0, 'mrp': 35032}
+INFO 2025-08-17 20:51:02,838 basehttp "POST /api/products/add HTTP/1.1" 201 283
+INFO 2025-08-17 20:51:02,896 basehttp "GET /api/products HTTP/1.1" 200 565
+INFO 2025-08-17 20:51:30,115 basehttp "GET /api/inventory HTTP/1.1" 200 590
+INFO 2025-08-17 20:51:40,050 basehttp "GET /api/inventory HTTP/1.1" 200 590
+INFO 2025-08-17 20:51:43,056 basehttp "GET /api/products/add/features HTTP/1.1" 200 1528
+INFO 2025-08-17 20:51:43,056 basehttp "GET /api/products HTTP/1.1" 200 565
+INFO 2025-08-17 20:51:49,696 basehttp "GET /api/products/2/inventory HTTP/1.1" 200 34766
+INFO 2025-08-17 20:51:49,776 basehttp "GET /api/stock-batches/?product=2 HTTP/1.1" 200 27
+INFO 2025-08-17 20:52:19,809 basehttp "POST /api/products/add/inventory HTTP/1.1" 201 3673
+INFO 2025-08-17 20:52:19,874 basehttp "GET /api/products/2/inventory HTTP/1.1" 200 38337
+INFO 2025-08-17 20:52:19,928 basehttp "GET /api/stock-batches/?product=2 HTTP/1.1" 200 53
+INFO 2025-08-17 20:52:25,661 basehttp "GET /api/inventory HTTP/1.1" 200 590
+INFO 2025-08-17 20:52:27,816 basehttp "GET /api/products/add/features HTTP/1.1" 200 1528
+INFO 2025-08-17 20:52:27,819 basehttp "GET /api/products HTTP/1.1" 200 566
+INFO 2025-08-17 20:52:49,306 basehttp "GET /api/inventory HTTP/1.1" 200 590
+INFO 2025-08-17 20:53:01,158 basehttp "GET /api/vendors/ HTTP/1.1" 200 685
+INFO 2025-08-17 20:53:03,264 basehttp "GET /api/vendors/1/analytics/ HTTP/1.1" 200 536
+INFO 2025-08-17 20:53:15,206 basehttp "GET /api/inventory HTTP/1.1" 200 590
+INFO 2025-08-17 20:53:16,147 basehttp "GET /api/products/add/features HTTP/1.1" 200 1528
+INFO 2025-08-17 20:53:16,150 basehttp "GET /api/products HTTP/1.1" 200 566
+INFO 2025-08-17 20:53:16,737 basehttp "GET /api/vendors/ HTTP/1.1" 200 685
+INFO 2025-08-17 20:53:18,820 basehttp "GET /api/products/add/features HTTP/1.1" 200 1528
+INFO 2025-08-17 20:53:18,821 basehttp "GET /api/products HTTP/1.1" 200 566
+INFO 2025-08-17 20:53:19,772 basehttp "GET /api/inventory HTTP/1.1" 200 590
+INFO 2025-08-17 20:53:22,103 basehttp "GET /api/products/add/features HTTP/1.1" 200 1528
+INFO 2025-08-17 20:53:22,103 basehttp "GET /api/products HTTP/1.1" 200 566
+INFO 2025-08-17 20:53:23,103 basehttp "OPTIONS /api/stock-batches/?product=3 HTTP/1.1" 200 0
+INFO 2025-08-17 20:53:23,103 basehttp "OPTIONS /api/products/3/inventory HTTP/1.1" 200 0
+INFO 2025-08-17 20:53:23,164 basehttp "GET /api/stock-batches/?product=3 HTTP/1.1" 200 2
+INFO 2025-08-17 20:53:23,173 basehttp "GET /api/products/3/inventory HTTP/1.1" 200 277
+INFO 2025-08-17 20:53:26,774 basehttp "GET /api/products/add/features HTTP/1.1" 200 1528
+INFO 2025-08-17 20:53:26,775 basehttp "GET /api/products HTTP/1.1" 200 566
+INFO 2025-08-17 20:53:28,646 basehttp "GET /api/stock-batches/?product=3 HTTP/1.1" 200 2
+INFO 2025-08-17 20:53:28,651 basehttp "GET /api/products/3/inventory HTTP/1.1" 200 277
+INFO 2025-08-17 20:53:31,793 basehttp "GET /api/products/add/features HTTP/1.1" 200 1528
+INFO 2025-08-17 20:53:31,793 basehttp "GET /api/products HTTP/1.1" 200 566
+INFO 2025-08-17 20:53:35,433 basehttp "GET /api/stock-batches/?product=2 HTTP/1.1" 200 53
+INFO 2025-08-17 20:53:35,447 basehttp "GET /api/products/2/inventory HTTP/1.1" 200 38337
+INFO 2025-08-17 20:53:37,091 basehttp "GET /api/products HTTP/1.1" 200 566
+INFO 2025-08-17 20:53:37,189 basehttp "GET /api/products/add/features HTTP/1.1" 200 1528
+INFO 2025-08-17 20:53:38,284 basehttp "GET /api/stock-batches/?product=3 HTTP/1.1" 200 2
+INFO 2025-08-17 20:53:38,286 basehttp "GET /api/products/3/inventory HTTP/1.1" 200 277
+INFO 2025-08-17 20:53:45,824 basehttp "GET /api/products HTTP/1.1" 200 566
+INFO 2025-08-17 20:53:45,829 basehttp "GET /api/products/add/features HTTP/1.1" 200 1528
+INFO 2025-08-17 20:53:47,509 basehttp "GET /api/stock-batches/?product=3 HTTP/1.1" 200 2
+INFO 2025-08-17 20:53:47,513 basehttp "GET /api/products/3/inventory HTTP/1.1" 200 277
+INFO 2025-08-17 20:54:00,362 basehttp "GET /api/products/add/features HTTP/1.1" 200 1528
+INFO 2025-08-17 20:54:00,362 basehttp "GET /api/products HTTP/1.1" 200 566
+INFO 2025-08-17 20:54:02,440 basehttp "GET /api/products/3/inventory HTTP/1.1" 200 277
+INFO 2025-08-17 20:54:02,440 basehttp "GET /api/stock-batches/?product=3 HTTP/1.1" 200 2
+INFO 2025-08-17 20:54:10,725 basehttp "GET /api/products/add/features HTTP/1.1" 200 1528
+INFO 2025-08-17 20:54:10,725 basehttp "GET /api/products HTTP/1.1" 200 566
+INFO 2025-08-17 20:54:17,856 basehttp "GET /api/stock-batches/?product=3 HTTP/1.1" 200 2
+INFO 2025-08-17 20:54:17,860 basehttp "GET /api/products/3/inventory HTTP/1.1" 200 277
+INFO 2025-08-17 20:54:33,460 basehttp "GET /api/products/add/features HTTP/1.1" 200 1528
+INFO 2025-08-17 20:54:33,460 basehttp "GET /api/products HTTP/1.1" 200 566
+INFO 2025-08-17 20:54:37,875 basehttp "GET /api/stock-batches/?product=3 HTTP/1.1" 200 2
+INFO 2025-08-17 20:54:37,876 basehttp "GET /api/products/3/inventory HTTP/1.1" 200 277
+INFO 2025-08-17 20:55:16,223 basehttp "GET /api/inventory HTTP/1.1" 200 590
+INFO 2025-08-17 20:55:20,020 basehttp "GET /api/inventory HTTP/1.1" 200 590
+INFO 2025-08-17 20:55:21,530 basehttp "GET /api/products HTTP/1.1" 200 566
+INFO 2025-08-17 20:55:21,534 basehttp "GET /api/products/add/features HTTP/1.1" 200 1528
+INFO 2025-08-17 20:55:22,842 basehttp "GET /api/stock-batches/?product=2 HTTP/1.1" 200 53
+INFO 2025-08-17 20:55:22,842 basehttp "GET /api/products/2/inventory HTTP/1.1" 200 38337
+INFO 2025-08-17 20:55:37,136 basehttp "OPTIONS /api/inventory/search/?sku=SAR-1834-S-2a5b9e-0606 HTTP/1.1" 200 0
+INFO 2025-08-17 20:55:37,198 basehttp "GET /api/inventory/search/?sku=SAR-1834-S-2a5b9e-0606 HTTP/1.1" 200 391
+INFO 2025-08-17 20:55:48,390 basehttp "OPTIONS /api/inventory/search/?sku=SAR-1834-S-2a5b9e-4608 HTTP/1.1" 200 0
+INFO 2025-08-17 20:55:48,457 basehttp "GET /api/inventory/search/?sku=SAR-1834-S-2a5b9e-4608 HTTP/1.1" 200 391
+INFO 2025-08-17 20:55:55,059 basehttp "OPTIONS /api/inventory/search/?sku=SAR-1834-S-2a5b9e-6975 HTTP/1.1" 200 0
+INFO 2025-08-17 20:55:55,133 basehttp "GET /api/inventory/search/?sku=SAR-1834-S-2a5b9e-6975 HTTP/1.1" 200 391
+INFO 2025-08-17 20:55:55,966 basehttp "GET /api/inventory/search/?sku=SAR-1834-S-2a5b9e-6975 HTTP/1.1" 200 391
+INFO 2025-08-17 20:55:56,166 basehttp "GET /api/inventory/search/?sku=SAR-1834-S-2a5b9e-6975 HTTP/1.1" 200 391
+INFO 2025-08-17 20:55:56,475 basehttp "GET /api/inventory/search/?sku=SAR-1834-S-2a5b9e-6975 HTTP/1.1" 200 391
+INFO 2025-08-17 20:56:04,801 basehttp "OPTIONS /api/inventory/search/?sku=SAR-1834-S-2a5b9e-0484 HTTP/1.1" 200 0
+INFO 2025-08-17 20:56:04,864 basehttp "GET /api/inventory/search/?sku=SAR-1834-S-2a5b9e-0484 HTTP/1.1" 200 391
+INFO 2025-08-17 20:56:05,133 basehttp "GET /api/inventory/search/?sku=SAR-1834-S-2a5b9e-0484 HTTP/1.1" 200 391
+INFO 2025-08-17 20:56:18,708 basehttp "OPTIONS /api/transactions/create HTTP/1.1" 200 0
+INFO 2025-08-17 20:56:18,909 basehttp "POST /api/transactions/create HTTP/1.1" 201 1116
+INFO 2025-08-17 20:57:49,282 basehttp "GET /api/dashboard/analytics/?days=30 HTTP/1.1" 200 1392
+INFO 2025-08-17 20:57:56,431 views User admin@admin.com fetched order list.
+INFO 2025-08-17 20:57:56,441 basehttp "GET /api/transactions/list HTTP/1.1" 200 1062
+INFO 2025-08-17 20:58:17,192 basehttp "GET /api/vendors/ HTTP/1.1" 200 685
+INFO 2025-08-17 20:58:18,791 basehttp "GET /api/vendors/1/analytics/ HTTP/1.1" 200 625
+INFO 2025-08-17 20:58:59,802 basehttp "GET /api/auth/verify HTTP/1.1" 200 67
+INFO 2025-08-17 20:58:59,880 basehttp "GET /api/auth/verify HTTP/1.1" 200 67
+INFO 2025-08-17 20:59:00,617 basehttp "GET /api/auth/verify HTTP/1.1" 200 67
+INFO 2025-08-17 20:59:00,681 basehttp "GET /api/auth/verify HTTP/1.1" 200 67
+INFO 2025-08-17 20:59:01,776 basehttp "GET /api/tailor/orders/ HTTP/1.1" 200 2
+INFO 2025-08-17 21:02:38,550 basehttp "OPTIONS /api/tailor/orders/add/ HTTP/1.1" 200 0
+WARNING 2025-08-17 21:02:38,607 log Bad Request: /api/tailor/orders/add/
+WARNING 2025-08-17 21:02:38,608 basehttp "POST /api/tailor/orders/add/ HTTP/1.1" 400 75
+WARNING 2025-08-17 21:02:48,082 log Bad Request: /api/tailor/orders/add/
+WARNING 2025-08-17 21:02:48,082 basehttp "POST /api/tailor/orders/add/ HTTP/1.1" 400 69
+WARNING 2025-08-17 21:02:52,494 log Bad Request: /api/tailor/orders/add/
+WARNING 2025-08-17 21:02:52,494 basehttp "POST /api/tailor/orders/add/ HTTP/1.1" 400 69
+INFO 2025-08-17 21:02:56,483 views Created new order #21ZlzSbd
+INFO 2025-08-17 21:02:56,485 basehttp "POST /api/tailor/orders/add/ HTTP/1.1" 201 402
+INFO 2025-08-17 21:02:56,544 basehttp "GET /api/tailor/orders/ HTTP/1.1" 200 404
+INFO 2025-08-17 21:03:20,818 basehttp "GET /api/manguva/report/?date=2025-08-17 HTTP/1.1" 200 695
+INFO 2025-08-17 21:03:24,462 basehttp "GET /api/tailor/orders/ HTTP/1.1" 200 404
+INFO 2025-08-17 21:04:22,200 views Created new order #SpzNM3kt
+INFO 2025-08-17 21:04:22,202 basehttp "POST /api/tailor/orders/add/ HTTP/1.1" 201 405
+INFO 2025-08-17 21:04:22,374 basehttp "GET /api/tailor/orders/ HTTP/1.1" 200 810
+INFO 2025-08-17 21:04:38,932 basehttp "OPTIONS /api/tailor/orders/2/payment/ HTTP/1.1" 200 0
+INFO 2025-08-17 21:04:39,121 basehttp "PATCH /api/tailor/orders/2/payment/ HTTP/1.1" 200 405
+INFO 2025-08-17 21:04:39,274 basehttp "GET /api/tailor/orders/ HTTP/1.1" 200 810
+INFO 2025-08-17 21:06:29,593 basehttp "GET /api/manguva/report/?date=2025-08-17 HTTP/1.1" 200 695
+INFO 2025-08-17 21:09:05,089 basehttp "GET /api/dashboard/analytics/?days=30 HTTP/1.1" 200 1392
+INFO 2025-08-17 21:11:18,651 basehttp "GET /api/vendors/ HTTP/1.1" 200 685
+INFO 2025-08-17 21:11:20,307 basehttp "GET /api/products/add/features HTTP/1.1" 200 1528
+INFO 2025-08-17 21:11:20,312 basehttp "GET /api/products HTTP/1.1" 200 566
+INFO 2025-08-17 21:11:21,596 basehttp "GET /api/inventory HTTP/1.1" 200 590
+INFO 2025-08-17 21:11:23,281 views User admin@admin.com fetched order list.
+INFO 2025-08-17 21:11:23,290 basehttp "GET /api/transactions/list HTTP/1.1" 200 1062
+INFO 2025-08-17 21:11:24,967 basehttp "GET /api/tailor/orders/ HTTP/1.1" 200 810
+INFO 2025-08-17 21:11:25,437 basehttp "GET /api/manguva/report/?date=2025-08-17 HTTP/1.1" 200 695
+INFO 2025-08-24 20:37:18,418 autoreload Watching for file changes with StatReloader
+INFO 2025-08-24 20:53:04,230 autoreload Watching for file changes with StatReloader
+WARNING 2025-08-24 20:53:51,609 log Unauthorized: /api/auth/verify
+WARNING 2025-08-24 20:53:51,609 basehttp "GET /api/auth/verify HTTP/1.1" 401 58
+WARNING 2025-08-24 20:53:51,744 log Unauthorized: /api/dashboard/analytics/
+WARNING 2025-08-24 20:53:51,744 basehttp "GET /api/dashboard/analytics/?days=30 HTTP/1.1" 401 58
+WARNING 2025-08-24 20:53:55,791 log Unauthorized: /api/dashboard/analytics/
+WARNING 2025-08-24 20:53:55,791 basehttp "GET /api/dashboard/analytics/?days=30 HTTP/1.1" 401 58
+WARNING 2025-08-24 20:54:04,089 log Unauthorized: /api/auth/verify
+WARNING 2025-08-24 20:54:04,089 basehttp "GET /api/auth/verify HTTP/1.1" 401 58
+INFO 2025-08-24 20:54:05,443 basehttp "OPTIONS /api/login HTTP/1.1" 200 0
+INFO 2025-08-24 20:54:06,125 basehttp "POST /api/login HTTP/1.1" 200 308
+INFO 2025-08-24 20:54:06,220 basehttp "OPTIONS /api/dashboard/analytics/?days=30 HTTP/1.1" 200 0
+INFO 2025-08-24 20:54:06,318 basehttp "GET /api/dashboard/analytics/?days=30 HTTP/1.1" 200 470
+INFO 2025-08-24 20:54:16,105 basehttp "OPTIONS /api/vendors HTTP/1.1" 200 0
+INFO 2025-08-24 20:54:16,114 basehttp "OPTIONS /api/vendors/ HTTP/1.1" 200 0
+INFO 2025-08-24 20:54:16,171 basehttp "GET /api/vendors/ HTTP/1.1" 200 2
+INFO 2025-08-24 20:54:32,303 basehttp "OPTIONS /api/vendors/add HTTP/1.1" 200 0
+INFO 2025-08-24 20:54:32,367 views Vendor creation request by user admin@admin.com
+INFO 2025-08-24 20:54:32,409 basehttp "POST /api/vendors/add HTTP/1.1" 201 231
+INFO 2025-08-24 20:54:32,502 basehttp "GET /api/vendors/ HTTP/1.1" 200 233
+INFO 2025-08-24 20:54:39,339 views Vendor creation request by user admin@admin.com
+INFO 2025-08-24 20:54:39,343 basehttp "POST /api/vendors/add HTTP/1.1" 201 231
+INFO 2025-08-24 20:54:39,435 basehttp "GET /api/vendors/ HTTP/1.1" 200 465
+INFO 2025-08-24 20:54:46,496 views Vendor creation request by user admin@admin.com
+INFO 2025-08-24 20:54:46,500 basehttp "POST /api/vendors/add HTTP/1.1" 201 230
+INFO 2025-08-24 20:54:46,696 basehttp "GET /api/vendors/ HTTP/1.1" 200 696
+INFO 2025-08-24 20:54:49,380 basehttp "OPTIONS /api/products HTTP/1.1" 200 0
+INFO 2025-08-24 20:54:49,384 basehttp "OPTIONS /api/products/add/features HTTP/1.1" 200 0
+INFO 2025-08-24 20:54:49,437 basehttp "GET /api/products HTTP/1.1" 200 2
+INFO 2025-08-24 20:54:49,440 basehttp "GET /api/products/add/features HTTP/1.1" 200 1539
+INFO 2025-08-24 20:55:33,288 basehttp "OPTIONS /api/products/add HTTP/1.1" 200 0
+INFO 2025-08-24 20:55:33,338 views Product creation request: {'vendor': 1, 'product_type': 'Kurti', 'fabric_type': 'Linen', 'color_code': '#2e46b1', 'base_price': 3354235, 'markup_type': 'fixed', 'markup_price': 35435, 'discount_percentage': 10, 'mrp': 3389670}
+INFO 2025-08-24 20:55:33,351 basehttp "POST /api/products/add HTTP/1.1" 201 295
+INFO 2025-08-24 20:55:33,409 basehttp "GET /api/products HTTP/1.1" 200 297
+INFO 2025-08-24 20:56:44,188 views Product creation request: {'vendor': 2, 'product_type': 'Saree', 'fabric_type': 'Cotton', 'color_code': '#c728cc', 'base_price': 56776545678, 'markup_type': 'percent', 'markup_price': 12490840049.160004, 'discount_percentage': 0, 'mrp': 69267385727}
+ERROR 2025-08-24 20:56:44,191 views Error creating product: {'base_price': [ErrorDetail(string='Ensure that there are no more than 10 digits in total.', code='max_digits')], 'markup_price': [ErrorDetail(string='Ensure that there are no more than 10 digits in total.', code='max_digits')], 'mrp': [ErrorDetail(string='Ensure that there are no more than 10 digits in total.', code='max_digits')]}
+WARNING 2025-08-24 20:56:44,192 log Bad Request: /api/products/add
+WARNING 2025-08-24 20:56:44,192 basehttp "POST /api/products/add HTTP/1.1" 400 36
+INFO 2025-08-24 20:56:49,736 views Product creation request: {'vendor': 2, 'product_type': 'Saree', 'fabric_type': 'Cotton', 'color_code': '#c728cc', 'base_price': 5677, 'markup_type': 'percent', 'markup_price': 1248.9400000000005, 'discount_percentage': 0, 'mrp': 6925}
+ERROR 2025-08-24 20:56:49,739 views Error creating product: {'markup_price': [ErrorDetail(string='Ensure that there are no more than 10 digits in total.', code='max_digits')]}
+WARNING 2025-08-24 20:56:49,740 log Bad Request: /api/products/add
+WARNING 2025-08-24 20:56:49,741 basehttp "POST /api/products/add HTTP/1.1" 400 36
+INFO 2025-08-24 20:56:54,953 views Product creation request: {'vendor': 2, 'product_type': 'Saree', 'fabric_type': 'Cotton', 'color_code': '#c728cc', 'base_price': 56, 'markup_type': 'percent', 'markup_price': 12.319999999999993, 'discount_percentage': 0, 'mrp': 68}
+ERROR 2025-08-24 20:56:54,960 views Error creating product: {'markup_price': [ErrorDetail(string='Ensure that there are no more than 10 digits in total.', code='max_digits')]}
+WARNING 2025-08-24 20:56:54,961 log Bad Request: /api/products/add
+WARNING 2025-08-24 20:56:54,961 basehttp "POST /api/products/add HTTP/1.1" 400 36
+INFO 2025-08-24 20:56:57,985 basehttp "OPTIONS /api/auth/verify HTTP/1.1" 200 0
+INFO 2025-08-24 20:56:58,057 basehttp "GET /api/auth/verify HTTP/1.1" 200 65
+INFO 2025-08-24 20:56:58,072 basehttp "GET /api/products HTTP/1.1" 200 297
+INFO 2025-08-24 20:56:58,073 basehttp "GET /api/products/add/features HTTP/1.1" 200 1539
+INFO 2025-08-24 20:57:16,735 views Product creation request: {'vendor': 2, 'product_type': 'Saree', 'fabric_type': 'Linen', 'color_code': '#c61717', 'base_price': 3434, 'markup_type': 'fixed', 'markup_price': 234, 'discount_percentage': 23, 'mrp': 3668}
+INFO 2025-08-24 20:57:16,748 basehttp "POST /api/products/add HTTP/1.1" 201 287
+INFO 2025-08-24 20:57:16,913 basehttp "GET /api/products HTTP/1.1" 200 585
+INFO 2025-08-24 20:57:43,697 views Product creation request: {'vendor': 2, 'product_type': 'Dress', 'fabric_type': 'Polyester', 'color_code': '#835252', 'base_price': 6755, 'markup_type': 'percent', 'markup_price': 202.64999999999964, 'discount_percentage': 3, 'mrp': 6957}
+ERROR 2025-08-24 20:57:43,700 views Error creating product: {'markup_price': [ErrorDetail(string='Ensure that there are no more than 10 digits in total.', code='max_digits')]}
+WARNING 2025-08-24 20:57:43,701 log Bad Request: /api/products/add
+WARNING 2025-08-24 20:57:43,701 basehttp "POST /api/products/add HTTP/1.1" 400 36
+INFO 2025-08-24 20:57:45,783 views Product creation request: {'vendor': 2, 'product_type': 'Dress', 'fabric_type': 'Polyester', 'color_code': '#835252', 'base_price': 6755, 'markup_type': 'percent', 'markup_price': 202.64999999999964, 'discount_percentage': 3, 'mrp': 6957}
+ERROR 2025-08-24 20:57:45,786 views Error creating product: {'markup_price': [ErrorDetail(string='Ensure that there are no more than 10 digits in total.', code='max_digits')]}
+WARNING 2025-08-24 20:57:45,786 log Bad Request: /api/products/add
+WARNING 2025-08-24 20:57:45,787 basehttp "POST /api/products/add HTTP/1.1" 400 36
+INFO 2025-08-24 20:58:31,893 basehttp "OPTIONS /api/inventory HTTP/1.1" 200 0
+INFO 2025-08-24 20:58:31,955 basehttp "GET /api/inventory HTTP/1.1" 200 2
+INFO 2025-08-24 20:58:33,234 basehttp "OPTIONS /api/inventory/products HTTP/1.1" 200 0
+INFO 2025-08-24 20:58:33,291 basehttp "GET /api/inventory/products HTTP/1.1" 200 129
+INFO 2025-08-24 20:58:42,773 basehttp "OPTIONS /api/products/add/inventory HTTP/1.1" 200 0
+INFO 2025-08-24 20:58:45,746 basehttp "POST /api/products/add/inventory HTTP/1.1" 201 151313
+INFO 2025-08-24 20:58:45,814 basehttp "GET /api/inventory HTTP/1.1" 200 617
+INFO 2025-08-24 20:58:54,723 basehttp "GET /api/inventory HTTP/1.1" 200 617
+INFO 2025-08-24 20:58:55,839 basehttp "GET /api/products/add/features HTTP/1.1" 200 1539
+INFO 2025-08-24 20:58:55,840 basehttp "GET /api/products HTTP/1.1" 200 588
+INFO 2025-08-24 20:58:58,633 basehttp "OPTIONS /api/products/1/inventory HTTP/1.1" 200 0
+INFO 2025-08-24 20:58:58,633 basehttp "OPTIONS /api/stock-batches/?product=1 HTTP/1.1" 200 0
+INFO 2025-08-24 20:58:58,726 basehttp "GET /api/products/1/inventory HTTP/1.1" 200 151496
+INFO 2025-08-24 20:58:58,809 basehttp "GET /api/stock-batches/?product=1 HTTP/1.1" 200 27
+INFO 2025-08-24 20:59:08,990 basehttp "OPTIONS /api/inventory/search/?sku=KUR-0527-S-2e46b1-7a89ef HTTP/1.1" 200 0
+INFO 2025-08-24 20:59:09,150 basehttp "GET /api/inventory/search/?sku=KUR-0527-S-2e46b1-7a89ef HTTP/1.1" 200 411
+INFO 2025-08-24 20:59:10,479 basehttp "GET /api/inventory HTTP/1.1" 200 617
+INFO 2025-08-24 20:59:11,550 basehttp "GET /api/products/add/features HTTP/1.1" 200 1539
+INFO 2025-08-24 20:59:11,551 basehttp "GET /api/products HTTP/1.1" 200 588
+INFO 2025-08-24 20:59:14,290 basehttp "GET /api/stock-batches/?product=1 HTTP/1.1" 200 27
+INFO 2025-08-24 20:59:14,329 basehttp "GET /api/products/1/inventory HTTP/1.1" 200 151496
+INFO 2025-08-24 20:59:26,065 basehttp "GET /api/inventory/search/?sku=KUR-0527-S-2e46b1-7a89ef HTTP/1.1" 200 411
+INFO 2025-08-24 20:59:30,207 basehttp "OPTIONS /api/inventory/search/?sku=KUR-0527-S-2e46b1-7a89efKUR-0527-M-2e46b1-ce2470 HTTP/1.1" 200 0
+WARNING 2025-08-24 20:59:30,267 log Not Found: /api/inventory/search/
+WARNING 2025-08-24 20:59:30,267 basehttp "GET /api/inventory/search/?sku=KUR-0527-S-2e46b1-7a89efKUR-0527-M-2e46b1-ce2470 HTTP/1.1" 404 31
+INFO 2025-08-24 20:59:36,678 basehttp "OPTIONS /api/inventory/search/?sku=KUR-0527-M-2e46b1-ce2470 HTTP/1.1" 200 0
+INFO 2025-08-24 20:59:36,741 basehttp "GET /api/inventory/search/?sku=KUR-0527-M-2e46b1-ce2470 HTTP/1.1" 200 412
+INFO 2025-08-24 20:59:47,529 basehttp "OPTIONS /api/transactions/create HTTP/1.1" 200 0
+INFO 2025-08-24 20:59:47,614 basehttp "POST /api/transactions/create HTTP/1.1" 201 783
+INFO 2025-08-24 21:00:07,062 basehttp "OPTIONS /api/transactions/list HTTP/1.1" 200 0
+INFO 2025-08-24 21:00:07,119 views User admin@admin.com fetched order list.
+INFO 2025-08-24 21:00:07,127 basehttp "GET /api/transactions/list HTTP/1.1" 200 750
+INFO 2025-08-24 21:00:11,874 basehttp "GET /api/dashboard/analytics/?days=30 HTTP/1.1" 200 1125
+INFO 2025-08-24 21:00:41,391 views User admin@admin.com fetched order list.
+INFO 2025-08-24 21:00:41,399 basehttp "GET /api/transactions/list HTTP/1.1" 200 750
+INFO 2025-08-24 21:01:01,980 basehttp "OPTIONS /api/tailor/orders/ HTTP/1.1" 200 0
+INFO 2025-08-24 21:01:02,147 basehttp "GET /api/tailor/orders/ HTTP/1.1" 200 2
+INFO 2025-08-24 21:02:11,245 basehttp "OPTIONS /api/tailor/orders/add/ HTTP/1.1" 200 0
+INFO 2025-08-24 21:02:11,309 views Created new tailor order #JpStwO3K with 2 items
+INFO 2025-08-24 21:02:11,313 basehttp "POST /api/tailor/orders/add/ HTTP/1.1" 201 565
+INFO 2025-08-24 21:02:11,480 basehttp "GET /api/tailor/orders/ HTTP/1.1" 200 567
+INFO 2025-08-24 21:02:51,945 basehttp "OPTIONS /api/manguva/report/?date=2025-08-24 HTTP/1.1" 200 0
+INFO 2025-08-24 21:02:52,026 basehttp "GET /api/manguva/report/?date=2025-08-24 HTTP/1.1" 200 662
+WARNING 2025-08-24 21:03:46,060 log Unauthorized: /api/auth/verify
+WARNING 2025-08-24 21:03:46,061 basehttp "GET /api/auth/verify HTTP/1.1" 401 58
+INFO 2025-08-24 21:03:58,977 basehttp "POST /api/login HTTP/1.1" 200 309
+INFO 2025-08-24 21:03:59,152 basehttp "GET /api/dashboard/analytics/?days=30 HTTP/1.1" 200 1125
+INFO 2025-08-24 21:04:04,687 basehttp "GET /api/products HTTP/1.1" 200 588
+INFO 2025-08-24 21:04:04,687 basehttp "GET /api/products/add/features HTTP/1.1" 200 1539
+INFO 2025-08-24 21:04:08,774 basehttp "GET /api/products HTTP/1.1" 200 588
+INFO 2025-08-24 21:04:08,870 basehttp "GET /api/products/add/features HTTP/1.1" 200 1539
+INFO 2025-08-24 21:04:10,070 basehttp "OPTIONS /api/products/2/inventory HTTP/1.1" 200 0
+INFO 2025-08-24 21:04:10,070 basehttp "OPTIONS /api/stock-batches/?product=2 HTTP/1.1" 200 0
+INFO 2025-08-24 21:04:10,141 basehttp "GET /api/stock-batches/?product=2 HTTP/1.1" 200 2
+INFO 2025-08-24 21:04:10,144 basehttp "GET /api/products/2/inventory HTTP/1.1" 200 280
+INFO 2025-08-24 21:04:11,809 basehttp "GET /api/products/add/features HTTP/1.1" 200 1539
+INFO 2025-08-24 21:04:11,910 basehttp "GET /api/products HTTP/1.1" 200 588
+INFO 2025-08-24 21:04:12,912 basehttp "GET /api/stock-batches/?product=1 HTTP/1.1" 200 27
+INFO 2025-08-24 21:04:13,029 basehttp "GET /api/products/1/inventory HTTP/1.1" 200 151293
+INFO 2025-08-24 21:04:22,300 basehttp "OPTIONS /api/inventory/search/?sku=KUR-0527-S-2e46b1-2ac3a8 HTTP/1.1" 200 0
+INFO 2025-08-24 21:04:22,360 basehttp "GET /api/inventory/search/?sku=KUR-0527-S-2e46b1-2ac3a8 HTTP/1.1" 200 412
+INFO 2025-08-24 21:04:27,934 basehttp "POST /api/transactions/create HTTP/1.1" 201 565
+INFO 2025-08-24 21:05:40,732 basehttp "GET /api/auth/verify HTTP/1.1" 200 66
+INFO 2025-08-24 21:05:40,888 basehttp "GET /api/auth/verify HTTP/1.1" 200 66
+WARNING 2025-08-24 21:05:43,552 log Unauthorized: /api/auth/verify
+WARNING 2025-08-24 21:05:43,553 basehttp "GET /api/auth/verify HTTP/1.1" 401 58
+WARNING 2025-08-24 21:05:43,554 log Unauthorized: /api/auth/verify
+WARNING 2025-08-24 21:05:43,554 basehttp "GET /api/auth/verify HTTP/1.1" 401 58
+WARNING 2025-08-24 21:05:44,165 log Unauthorized: /api/auth/verify
+WARNING 2025-08-24 21:05:44,165 basehttp "GET /api/auth/verify HTTP/1.1" 401 58
+INFO 2025-08-24 21:05:47,707 basehttp "POST /api/login HTTP/1.1" 200 308
+INFO 2025-08-24 21:05:47,889 basehttp "GET /api/dashboard/analytics/?days=30 HTTP/1.1" 200 1383
+INFO 2025-08-24 22:13:24,759 basehttp "GET /api/manguva/report/?date=2025-08-24 HTTP/1.1" 200 839
+INFO 2025-08-24 22:13:28,237 basehttp "GET /api/tailor/orders/ HTTP/1.1" 200 567
+INFO 2025-08-24 22:13:53,957 basehttp "OPTIONS /api/tailor/orders/1/payment/ HTTP/1.1" 200 0
+INFO 2025-08-24 22:13:54,111 basehttp "PATCH /api/tailor/orders/1/payment/ HTTP/1.1" 200 566
+INFO 2025-08-24 22:13:54,271 basehttp "GET /api/tailor/orders/ HTTP/1.1" 200 568
+WARNING 2025-08-24 22:14:33,335 log Bad Request: /api/tailor/orders/add/
+WARNING 2025-08-24 22:14:33,335 basehttp "POST /api/tailor/orders/add/ HTTP/1.1" 400 56
+INFO 2025-08-24 22:14:39,623 views Created new tailor order #oMHvKlOs with 1 items
+INFO 2025-08-24 22:14:39,627 basehttp "POST /api/tailor/orders/add/ HTTP/1.1" 201 470
+INFO 2025-08-24 22:14:39,688 basehttp "GET /api/tailor/orders/ HTTP/1.1" 200 1039
+INFO 2025-08-24 22:14:48,243 basehttp "OPTIONS /api/tailor/orders/2/payment/ HTTP/1.1" 200 0
+INFO 2025-08-24 22:14:48,311 basehttp "PATCH /api/tailor/orders/2/payment/ HTTP/1.1" 200 470
+INFO 2025-08-24 22:14:48,471 basehttp "GET /api/tailor/orders/ HTTP/1.1" 200 1039
+INFO 2025-08-24 22:15:55,709 views Created new tailor order #q2ieDDPc with 1 items
+INFO 2025-08-24 22:15:55,713 basehttp "POST /api/tailor/orders/add/ HTTP/1.1" 201 475
+INFO 2025-08-24 22:15:55,778 basehttp "GET /api/tailor/orders/ HTTP/1.1" 200 1515
+INFO 2025-08-24 22:16:49,537 basehttp "OPTIONS /api/tailor/orders/3/payment/ HTTP/1.1" 200 0
+WARNING 2025-08-24 22:16:49,597 log Bad Request: /api/tailor/orders/3/payment/
+WARNING 2025-08-24 22:16:49,597 basehttp "PATCH /api/tailor/orders/3/payment/ HTTP/1.1" 400 63
+INFO 2025-08-24 22:17:03,266 basehttp "PATCH /api/tailor/orders/3/payment/ HTTP/1.1" 200 475
+INFO 2025-08-24 22:17:03,338 basehttp "GET /api/tailor/orders/ HTTP/1.1" 200 1515
+INFO 2025-08-24 22:18:09,148 views User admin@admin.com fetched order list.
+INFO 2025-08-24 22:18:09,156 basehttp "GET /api/transactions/list HTTP/1.1" 200 1292
+INFO 2025-08-24 22:18:10,235 basehttp "GET /api/manguva/report/?date=2025-08-24 HTTP/1.1" 200 839
+INFO 2025-08-24 22:18:15,518 basehttp "GET /api/inventory HTTP/1.1" 200 617
+INFO 2025-08-24 22:18:16,841 basehttp "GET /api/products HTTP/1.1" 200 588
+INFO 2025-08-24 22:18:16,944 basehttp "GET /api/products/add/features HTTP/1.1" 200 1539
+INFO 2025-08-24 22:18:17,430 basehttp "GET /api/vendors/ HTTP/1.1" 200 696
+INFO 2025-08-24 22:24:49,113 basehttp "GET /api/dashboard/analytics/?days=30 HTTP/1.1" 200 1383
+INFO 2025-08-24 22:26:03,985 basehttp "GET /api/vendors/ HTTP/1.1" 200 696
+INFO 2025-08-24 22:26:05,187 basehttp "OPTIONS /api/vendors/1/analytics/ HTTP/1.1" 200 0
+INFO 2025-08-24 22:26:05,277 basehttp "GET /api/vendors/1/analytics/ HTTP/1.1" 200 463
+INFO 2025-08-24 22:51:00,854 basehttp "GET /api/products/add/features HTTP/1.1" 200 1539
+INFO 2025-08-24 22:51:00,854 basehttp "GET /api/products HTTP/1.1" 200 588
+INFO 2025-08-24 22:51:01,833 basehttp "GET /api/dashboard/analytics/?days=30 HTTP/1.1" 200 1383
